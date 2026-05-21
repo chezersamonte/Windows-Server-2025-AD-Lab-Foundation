@@ -27,10 +27,9 @@ administration, network infrastructure setup, and basic enterprise IT operations
 - Hyper-V
 
 ## Network Configuration
-Server IP: 192.168.10.10
-Subnet: 255.255.255.0
-Gateway: 192.168.10.1
-DNS: 192.168.10.10
+Server IP: 192.168.10.10 <br>
+Subnet: 255.255.255.0 <br>
+Gateway: 192.168.10.1 <br>
+DNS: 192.168.10.10<br>
 
-DHCP Range:
-192.168.10.100 - 192.168.10.200
+DHCP Range: 192.168.10.100 - 192.168.10.200
