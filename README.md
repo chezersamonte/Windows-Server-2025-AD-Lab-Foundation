@@ -26,14 +26,10 @@ administration, network infrastructure setup, and basic enterprise IT operations
 - DHCP Server
 - Hyper-V
 
-## Network Topology
+## Network Topology & Configuration
+- This section shows the network topology and IP configuration used in the Windows Server Home Lab environment.
+  
 ![Nextwork Topology](Images/NetworkTopology2.png)
-
-## Network Configuration
-- Server IP: 192.168.10.10 <br>
-- Subnet: 255.255.255.0 <br>
-- Gateway: 192.168.10.1 <br>
-- DNS: 192.168.10.10<br>
 
 - DHCP Range: 192.168.10.100 - 192.168.10.200
 
