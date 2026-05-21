@@ -1,46 +1,143 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>Windows Server 2025 Lab</title>
 
   <style>
-    body {
-      background-color: #121212;
-      color: white;
-      font-family: Arial;
-      text-align: center;
-      padding: 40px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .video-container {
-      margin-top: 30px;
+    body {
+      background-color: #081b0f;
+      color: #d8ffe1;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0f2d18;
+      padding: 25px;
+      text-align: center;
+      border-bottom: 2px solid #1aff66;
+      box-shadow: 0 0 15px rgba(26,255,102,0.3);
+    }
+
+    header h1 {
+      color: #1aff66;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      color: #9dffb8;
+      margin-top: 10px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: #102417;
+      padding: 25px;
+      border-radius: 14px;
+      border: 1px solid #1aff66;
+      box-shadow: 0 0 15px rgba(26,255,102,0.15);
+      margin-bottom: 30px;
+    }
+
+    .card h2 {
+      color: #1aff66;
+      margin-bottom: 15px;
     }
 
     iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
       border-radius: 12px;
-      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+      margin-top: 15px;
     }
 
-    h1 {
-      color: #4da6ff;
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 22px;
+      background: #1aff66;
+      color: #081b0f;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background: #8cffb2;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #7dbe91;
+      border-top: 1px solid #1aff66;
+      margin-top: 40px;
     }
   </style>
 </head>
 
 <body>
 
-  <h1>Windows Server 2025 Installation</h1>
+  <header>
+    <h1>Windows Server 2025 Lab</h1>
+    <p>Homelab Setup • Server Installation • Virtualization</p>
+  </header>
 
-  <p>My homelab installation walkthrough.</p>
+  <div class="container">
 
-  <div class="video-container">
-    <iframe width="900" height="500"
-    src="https://www.youtube.com/embed/JIB-azlAO9A"
-    title="YouTube video player"
-    frameborder="0"
-    allowfullscreen>
-    </iframe>
+    <div class="card">
+      <h2>Installation Walkthrough</h2>
+
+      <p>
+        This video demonstrates the installation and setup process
+        for Windows Server 2025 in my homelab environment.
+      </p>
+
+      <iframe
+        src="https://www.youtube.com/embed/JIB-azlAO9A"
+        title="Windows Server 2025 Installation"
+        allowfullscreen>
+      </iframe>
+
+      <a class="button"
+         href="https://youtu.be/JIB-azlAO9A"
+         target="_blank">
+         Watch on YouTube
+      </a>
+    </div>
+
+    <div class="card">
+      <h2>About This Project</h2>
+
+      <p>
+        This repository contains my server lab experiments,
+        configuration notes, and deployment tutorials.
+      </p>
+    </div>
+
   </div>
+
+  <footer>
+    © 2026 My Homelab Project
+  </footer>
 
 </body>
 </html>
