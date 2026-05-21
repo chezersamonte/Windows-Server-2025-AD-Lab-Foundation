@@ -1,7 +1,7 @@
 # Windows-Server-Home-Lab
 
 ## Description
-This project demonstrates the setup of a Windows Server 2022 Home Lab
+This project demonstrates the setup of a Windows Server 2025 Home Lab
 that simulates a small enterprise network environment.
 
 It includes the installation and configuration of Active Directory,
@@ -11,7 +11,7 @@ The goal of this project is to develop hands-on skills in Windows Server
 administration, network infrastructure setup, and basic enterprise IT operations.
  
 ## Objectives
-- Install and configure Windows Server 2022
+- Install and configure Windows Server 2025
 - Set up Active Directory Domain Services (AD DS)
 - Configure DNS for domain name resolution
 - Configure DHCP for automatic IP assignment
@@ -19,7 +19,7 @@ administration, network infrastructure setup, and basic enterprise IT operations
 - Practice basic troubleshooting in a network environment
 
 ## Technology Used
-- Windows Server 2022
+- Windows Server 2025
 - Windows 10 / 11 Client
 - Active Directory Domain Services
 - DNS Server
@@ -43,6 +43,7 @@ administration, network infrastructure setup, and basic enterprise IT operations
    
 Two virtual machines were created to simulate a basic enterprise environment: one server and one client machine.
 
-- SRV-DC01 (Windows Server 2022) – used as the Domain Controller<br>
+- SRV-DC01 (Windows Server 2025) – used as the Domain Controller<br>
 ![Nextwork Topology](Images/vm-srv-dc01.png)<br>
 - PC-01 (Windows 10/11) – used as a domain-joined client machine<br>
+![Nextwork Topology](Images/vm-w11-pc1.png)<br>
