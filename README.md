@@ -44,6 +44,9 @@ administration, network infrastructure setup, and basic enterprise IT operations
 Two virtual machines were created to simulate a basic enterprise environment: one server and one client machine.
 
 - SRV-DC01 (Windows Server 2025) – used as the Domain Controller<br>
+
 ![Nextwork Topology](Images/vm-srv-dc01.png)<br>
+
 - PC-01 (Windows 10/11) – used as a domain-joined client machine<br>
+
 ![Nextwork Topology](Images/vm-w11-pc1.png)<br>
