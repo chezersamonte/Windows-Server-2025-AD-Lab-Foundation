@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Windows Server 2025 Lab</title>
+  <title>Windows Server Home Lab</title>
 
   <style>
     * {
@@ -17,12 +17,12 @@
       background-color: #081b0f;
       color: #d8ffe1;
       font-family: Arial, sans-serif;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     header {
       background: #0f2d18;
-      padding: 25px;
+      padding: 35px;
       text-align: center;
       border-bottom: 2px solid #1aff66;
       box-shadow: 0 0 15px rgba(26,255,102,0.3);
@@ -30,12 +30,13 @@
 
     header h1 {
       color: #1aff66;
-      font-size: 2.5rem;
+      font-size: 2.8rem;
     }
 
     header p {
       color: #9dffb8;
       margin-top: 10px;
+      font-size: 1.1rem;
     }
 
     .container {
@@ -47,7 +48,7 @@
 
     .card {
       background: #102417;
-      padding: 25px;
+      padding: 30px;
       border-radius: 14px;
       border: 1px solid #1aff66;
       box-shadow: 0 0 15px rgba(26,255,102,0.15);
@@ -57,6 +58,17 @@
     .card h2 {
       color: #1aff66;
       margin-bottom: 15px;
+      border-bottom: 1px solid #1aff66;
+      padding-bottom: 10px;
+    }
+
+    p, li {
+      color: #d8ffe1;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-top: 10px;
     }
 
     iframe {
@@ -64,7 +76,8 @@
       height: 500px;
       border: none;
       border-radius: 12px;
-      margin-top: 15px;
+      margin-top: 20px;
+      box-shadow: 0 0 20px rgba(26,255,102,0.2);
     }
 
     .button {
@@ -84,9 +97,17 @@
       transform: scale(1.05);
     }
 
+    .info-box {
+      background: #0d1f13;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 15px;
+      border-left: 4px solid #1aff66;
+    }
+
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 25px;
       color: #7dbe91;
       border-top: 1px solid #1aff66;
       margin-top: 40px;
@@ -97,19 +118,121 @@
 <body>
 
   <header>
-    <h1>Windows Server 2025 Lab</h1>
-    <p>Homelab Setup • Server Installation • Virtualization</p>
+    <h1>Windows Server Home Lab</h1>
+    <p>Active Directory • DNS • DHCP • Hyper-V • Enterprise Networking</p>
   </header>
 
   <div class="container">
 
     <div class="card">
-      <h2>Installation Walkthrough</h2>
+      <h2>Description</h2>
 
       <p>
-        This video demonstrates the installation and setup process
-        for Windows Server 2025 in my homelab environment.
+        This project demonstrates the setup of a Windows Server 2025
+        Home Lab that simulates a small enterprise network environment.
       </p>
+
+      <br>
+
+      <p>
+        It includes the installation and configuration of
+        Active Directory, DNS, and DHCP services,
+        along with a Windows client joined to a domain.
+      </p>
+
+      <br>
+
+      <p>
+        The goal of this project is to develop hands-on skills
+        in Windows Server administration, network infrastructure setup,
+        and basic enterprise IT operations.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Project Objectives</h2>
+
+      <ul>
+        <li>Install and configure Windows Server 2025</li>
+        <li>Set up Active Directory Domain Services (AD DS)</li>
+        <li>Configure DNS for domain name resolution</li>
+        <li>Configure DHCP for automatic IP assignment</li>
+        <li>Join a Windows client to the domain</li>
+        <li>Practice basic troubleshooting in a network environment</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Technology Used</h2>
+
+      <ul>
+        <li>Windows Server 2025</li>
+        <li>Windows 10 / 11 Client</li>
+        <li>Active Directory Domain Services</li>
+        <li>DNS Server</li>
+        <li>DHCP Server</li>
+        <li>Hyper-V</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Network Configuration</h2>
+
+      <div class="info-box">
+        <p><strong>Server IP:</strong> 192.168.10.10</p>
+        <p><strong>Subnet:</strong> 255.255.255.0</p>
+        <p><strong>Gateway:</strong> 192.168.10.1</p>
+        <p><strong>DNS:</strong> 192.168.10.10</p>
+        <p><strong>DHCP Range:</strong> 192.168.10.100 - 192.168.10.200</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Implementation Steps</h2>
+
+      <h3>1. Create Virtual Machines</h3>
+
+      <br>
+
+      <p>
+        Two virtual machines were created to simulate
+        a basic enterprise environment:
+      </p>
+
+      <ul>
+        <li>
+          <strong>SRV-DC01 (Windows Server 2025)</strong>
+          – used as the Domain Controller
+        </li>
+
+        <li>
+          <strong>PC-01 (Windows 10/11)</strong>
+          – used as a domain-joined client machine
+        </li>
+      </ul>
+
+      <br>
+
+      <h3>2. Install Windows Server 2025</h3>
+
+      <br>
+
+      <p>
+        Windows Server 2025 was installed on the
+        SRV-DC01 virtual machine to prepare it as
+        the main server for the environment.
+      </p>
+
+      <br>
+
+      <p>
+        After installation, the server was renamed
+        to SRV-DC01 for proper identification within the network.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Installation Walkthrough Video</h2>
 
       <iframe
         src="https://www.youtube.com/embed/JIB-azlAO9A"
@@ -124,19 +247,10 @@
       </a>
     </div>
 
-    <div class="card">
-      <h2>About This Project</h2>
-
-      <p>
-        This repository contains my server lab experiments,
-        configuration notes, and deployment tutorials.
-      </p>
-    </div>
-
   </div>
 
   <footer>
-    © 2026 My Homelab Project
+    © 2026 Windows Server Home Lab Project
   </footer>
 
 </body>
