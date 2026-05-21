@@ -27,7 +27,7 @@ administration, network infrastructure setup, and basic enterprise IT operations
 - Hyper-V
 
 ## Network Topology
-![Nextwork Topology](images/Network Topology.png)
+![Nextwork Topology](Images/Network Topology.png)
 
 ## Network Configuration
 Server IP: 192.168.10.10 <br>
