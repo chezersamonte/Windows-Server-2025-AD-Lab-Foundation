@@ -30,9 +30,9 @@ administration, network infrastructure setup, and basic enterprise IT operations
 ![Nextwork Topology](Images/NetworkTopology.png)
 
 ## Network Configuration
-Server IP: 192.168.10.10 <br>
-Subnet: 255.255.255.0 <br>
-Gateway: 192.168.10.1 <br>
-DNS: 192.168.10.10<br>
+- Server IP: 192.168.10.10 <br>
+- Subnet: 255.255.255.0 <br>
+- Gateway: 192.168.10.1 <br>
+- DNS: 192.168.10.10<br>
 
-DHCP Range: 192.168.10.100 - 192.168.10.200
+- DHCP Range: 192.168.10.100 - 192.168.10.200
