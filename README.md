@@ -26,6 +26,9 @@ administration, network infrastructure setup, and basic enterprise IT operations
 - DHCP Server
 - Hyper-V
 
+## Network Topology
+![Nextwork Topology](images/Network Topology.png)
+
 ## Network Configuration
 Server IP: 192.168.10.10 <br>
 Subnet: 255.255.255.0 <br>
