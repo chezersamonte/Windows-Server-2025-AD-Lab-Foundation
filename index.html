@@ -13,17 +13,19 @@
 
   <!-- SIDEBAR -->
   <aside class="sidebar">
+
     <h2>Home Lab</h2>
 
     <nav>
       <a href="#description">Description</a>
       <a href="#objectives">Objectives</a>
       <a href="#technology">Technology</a>
-      <a href="#topology">Network Topology</a>
+      <a href="#topology">Topology</a>
       <a href="#network">Network Config</a>
       <a href="#implementation">Implementation</a>
       <a href="#video">Installation Video</a>
     </nav>
+
   </aside>
 
   <!-- MAIN CONTENT -->
@@ -31,17 +33,18 @@
 
     <!-- HERO -->
     <section class="hero">
-      <div>
-        <h1>Windows Server Home Lab</h1>
 
-        <p>
-          Windows Server 2025 • Active Directory • DNS • DHCP • Hyper-V
-        </p>
-      </div>
+      <h1>Windows Server Home Lab</h1>
+
+      <p>
+        Windows Server 2025 • Active Directory • DNS • DHCP • Hyper-V
+      </p>
+
     </section>
 
     <!-- DESCRIPTION -->
     <section class="card" id="description">
+
       <h2>Description</h2>
 
       <ul>
@@ -60,13 +63,16 @@
         <li>
           The goal of this project is to develop
           hands-on skills in Windows Server administration,
-          network infrastructure setup, and basic enterprise IT operations.
+          network infrastructure setup,
+          and enterprise IT operations.
         </li>
       </ul>
+
     </section>
 
     <!-- OBJECTIVES -->
     <section class="card" id="objectives">
+
       <h2>Objectives</h2>
 
       <ul>
@@ -77,77 +83,100 @@
         <li>Join a Windows client to the domain</li>
         <li>Practice basic troubleshooting in a network environment</li>
       </ul>
+
     </section>
 
     <!-- TECHNOLOGY -->
     <section class="card" id="technology">
+
       <h2>Technology Used</h2>
 
       <div class="tech-grid">
+
         <div class="tech-card">Windows Server 2025</div>
         <div class="tech-card">Windows 10 / 11</div>
         <div class="tech-card">Active Directory</div>
         <div class="tech-card">DNS Server</div>
         <div class="tech-card">DHCP Server</div>
         <div class="tech-card">Hyper-V</div>
+
       </div>
+
     </section>
 
     <!-- TOPOLOGY -->
     <section class="card" id="topology">
+
       <h2>Network Topology</h2>
 
-      <img src="Images/NetworkTopology.png"
-           alt="Network Topology"
-           class="image">
+      <img
+        src="Images/NetworkTopology.png"
+        alt="Network Topology"
+        class="image">
+
     </section>
 
     <!-- NETWORK CONFIG -->
     <section class="card" id="network">
+
       <h2>Network Configuration</h2>
 
       <div class="config-box">
+
         <p><strong>Server IP:</strong> 192.168.10.10</p>
         <p><strong>Subnet:</strong> 255.255.255.0</p>
         <p><strong>Gateway:</strong> 192.168.10.1</p>
         <p><strong>DNS:</strong> 192.168.10.10</p>
         <p><strong>DHCP Range:</strong> 192.168.10.100 - 192.168.10.200</p>
+
       </div>
+
     </section>
 
     <!-- IMPLEMENTATION -->
     <section class="card" id="implementation">
+
       <h2>Implementation Steps</h2>
 
       <h3>1. Create Virtual Machines</h3>
 
       <p>
         Two virtual machines were created to simulate
-        a basic enterprise environment:
+        a small enterprise environment:
       </p>
 
       <div class="vm-grid">
 
+        <!-- SERVER VM -->
         <div class="vm-card">
-          <img src="Images/vm-srv-dc01.png"
-               alt="SRV-DC01">
+
+          <img
+            src="Images/vm-srv-dc01.png"
+            alt="SRV-DC01"
+            class="image">
 
           <h4>SRV-DC01</h4>
 
           <p>
             Windows Server 2025 used as the Domain Controller.
           </p>
+
         </div>
 
+        <!-- CLIENT VM -->
         <div class="vm-card">
-          <img src="Images/vm-w11-pc1.png"
-               alt="PC-01">
+
+          <img
+            src="Images/vm-w11-pc1.png"
+            alt="PC-01"
+            class="image">
 
           <h4>PC-01</h4>
 
           <p>
-            Windows 10/11 client machine joined to the domain.
+            Windows 10 / 11 client machine joined to the domain.
           </p>
+
         </div>
 
       </div>
@@ -158,8 +187,8 @@
 
       <ul>
         <li>
-          Windows Server 2025 was installed on the
-          SRV-DC01 virtual machine.
+          Windows Server 2025 was installed on
+          the SRV-DC01 virtual machine.
         </li>
 
         <li>
@@ -167,10 +196,12 @@
           for proper network identification.
         </li>
       </ul>
+
     </section>
 
     <!-- VIDEO -->
     <section class="card" id="video">
+
       <h2>Windows Server 2025 Installation</h2>
 
       <iframe
@@ -181,16 +212,22 @@
 
       <br>
 
-      <a class="button"
-         href="https://youtu.be/JIB-azlAO9A"
-         target="_blank">
-         Watch on YouTube
+      <a
+        class="button"
+        href="https://youtu.be/JIB-azlAO9A"
+        target="_blank">
+
+        Watch on YouTube
+
       </a>
+
     </section>
 
     <!-- FOOTER -->
     <footer>
+
       © 2026 Windows Server Home Lab Project
+
     </footer>
 
   </main>
