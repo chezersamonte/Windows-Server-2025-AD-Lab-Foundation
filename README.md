@@ -50,3 +50,10 @@ Two virtual machines were created to simulate a basic enterprise environment: on
 - PC-01 (Windows 10/11) – used as a domain-joined client machine<br>
 
 ![Nextwork Topology](Images/vm-w11-pc1.png)<br>
+
+2. Install Windows Server 2025
+   
+- Windows Server 2025 was installed on the SRV-DC01 virtual machine to prepare it as the main server for the environment.
+- After installation, the server was renamed to SRV-DC01 for proper identification within the network.
+
+[![Windows Server 2025 Installation](https://youtu.be/JIB-azlAO9A)
