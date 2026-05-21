@@ -31,7 +31,6 @@ administration, network infrastructure setup, and basic enterprise IT operations
   
 ![Nextwork Topology](Images/NetworkTopology2.png)
 
-- DHCP Range: 192.168.10.100 - 192.168.10.200
 
 ## Implementation Steps
 
