@@ -11,46 +11,62 @@
 
 <body>
 
-  <header>
-    <h1>Windows Server Home Lab</h1>
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2>Home Lab</h2>
 
-    <p>
-      Active Directory • DNS • DHCP • Hyper-V • Enterprise Networking
-    </p>
-  </header>
+    <nav>
+      <a href="#description">Description</a>
+      <a href="#objectives">Objectives</a>
+      <a href="#technology">Technology</a>
+      <a href="#topology">Network Topology</a>
+      <a href="#network">Network Config</a>
+      <a href="#implementation">Implementation</a>
+      <a href="#video">Installation Video</a>
+    </nav>
+  </aside>
 
-  <main class="container">
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <h1>Windows Server Home Lab</h1>
+
+        <p>
+          Windows Server 2025 • Active Directory • DNS • DHCP • Hyper-V
+        </p>
+      </div>
+    </section>
 
     <!-- DESCRIPTION -->
-    <section class="card">
+    <section class="card" id="description">
       <h2>Description</h2>
 
-      <p>
-        This project demonstrates the setup of a
-        Windows Server 2025 Home Lab that simulates
-        a small enterprise network environment.
-      </p>
+      <ul>
+        <li>
+          This project demonstrates the setup of a
+          Windows Server 2025 Home Lab that simulates
+          a small enterprise network environment.
+        </li>
 
-      <br>
+        <li>
+          It includes the installation and configuration
+          of Active Directory, DNS, and DHCP services,
+          along with a Windows client joined to a domain.
+        </li>
 
-      <p>
-        It includes the installation and configuration
-        of Active Directory, DNS, and DHCP services,
-        along with a Windows client joined to a domain.
-      </p>
-
-      <br>
-
-      <p>
-        The goal of this project is to develop
-        hands-on skills in Windows Server administration,
-        network infrastructure setup, and basic
-        enterprise IT operations.
-      </p>
+        <li>
+          The goal of this project is to develop
+          hands-on skills in Windows Server administration,
+          network infrastructure setup, and basic enterprise IT operations.
+        </li>
+      </ul>
     </section>
 
     <!-- OBJECTIVES -->
-    <section class="card">
+    <section class="card" id="objectives">
       <h2>Objectives</h2>
 
       <ul>
@@ -64,24 +80,33 @@
     </section>
 
     <!-- TECHNOLOGY -->
-    <section class="card">
+    <section class="card" id="technology">
       <h2>Technology Used</h2>
 
-      <ul>
-        <li>Windows Server 2025</li>
-        <li>Windows 10 / 11 Client</li>
-        <li>Active Directory Domain Services</li>
-        <li>DNS Server</li>
-        <li>DHCP Server</li>
-        <li>Hyper-V</li>
-      </ul>
+      <div class="tech-grid">
+        <div class="tech-card">Windows Server 2025</div>
+        <div class="tech-card">Windows 10 / 11</div>
+        <div class="tech-card">Active Directory</div>
+        <div class="tech-card">DNS Server</div>
+        <div class="tech-card">DHCP Server</div>
+        <div class="tech-card">Hyper-V</div>
+      </div>
     </section>
 
-    <!-- NETWORK -->
-    <section class="card">
+    <!-- TOPOLOGY -->
+    <section class="card" id="topology">
+      <h2>Network Topology</h2>
+
+      <img src="Images/NetworkTopology.png"
+           alt="Network Topology"
+           class="image">
+    </section>
+
+    <!-- NETWORK CONFIG -->
+    <section class="card" id="network">
       <h2>Network Configuration</h2>
 
-      <div class="info-box">
+      <div class="config-box">
         <p><strong>Server IP:</strong> 192.168.10.10</p>
         <p><strong>Subnet:</strong> 255.255.255.0</p>
         <p><strong>Gateway:</strong> 192.168.10.1</p>
@@ -91,49 +116,61 @@
     </section>
 
     <!-- IMPLEMENTATION -->
-    <section class="card">
+    <section class="card" id="implementation">
       <h2>Implementation Steps</h2>
 
-      <h3>Create Virtual Machines</h3>
+      <h3>1. Create Virtual Machines</h3>
 
       <p>
         Two virtual machines were created to simulate
         a basic enterprise environment:
       </p>
 
+      <div class="vm-grid">
+
+        <div class="vm-card">
+          <img src="Images/vm-srv-dc01.png"
+               alt="SRV-DC01">
+
+          <h4>SRV-DC01</h4>
+
+          <p>
+            Windows Server 2025 used as the Domain Controller.
+          </p>
+        </div>
+
+        <div class="vm-card">
+          <img src="Images/vm-w11-pc1.png"
+               alt="PC-01">
+
+          <h4>PC-01</h4>
+
+          <p>
+            Windows 10/11 client machine joined to the domain.
+          </p>
+        </div>
+
+      </div>
+
+      <br><br>
+
+      <h3>2. Install Windows Server 2025</h3>
+
       <ul>
         <li>
-          <strong>SRV-DC01 (Windows Server 2025)</strong>
-          – used as the Domain Controller
+          Windows Server 2025 was installed on the
+          SRV-DC01 virtual machine.
         </li>
 
         <li>
-          <strong>PC-01 (Windows 10/11)</strong>
-          – used as a domain-joined client machine
+          The server was renamed to SRV-DC01
+          for proper network identification.
         </li>
       </ul>
-
-      <br>
-
-      <h3>Install Windows Server 2025</h3>
-
-      <p>
-        Windows Server 2025 was installed on the
-        SRV-DC01 virtual machine to prepare it
-        as the main server for the environment.
-      </p>
-
-      <br>
-
-      <p>
-        After installation, the server was renamed
-        to SRV-DC01 for proper identification
-        within the network.
-      </p>
     </section>
 
     <!-- VIDEO -->
-    <section class="card">
+    <section class="card" id="video">
       <h2>Windows Server 2025 Installation</h2>
 
       <iframe
@@ -142,6 +179,8 @@
         allowfullscreen>
       </iframe>
 
+      <br>
+
       <a class="button"
          href="https://youtu.be/JIB-azlAO9A"
          target="_blank">
@@ -149,11 +188,12 @@
       </a>
     </section>
 
-  </main>
+    <!-- FOOTER -->
+    <footer>
+      © 2026 Windows Server Home Lab Project
+    </footer>
 
-  <footer>
-    © 2026 Windows Server Home Lab Project
-  </footer>
+  </main>
 
 </body>
 </html>
