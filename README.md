@@ -56,4 +56,4 @@ Two virtual machines were created to simulate a basic enterprise environment: on
 - Windows Server 2025 was installed on the SRV-DC01 virtual machine to prepare it as the main server for the environment.
 - After installation, the server was renamed to SRV-DC01 for proper identification within the network.
 
-[![Windows Server 2025 Installation](https://youtu.be/JIB-azlAO9A)
+[![Windows Server 2025 Installation](https://img.youtube.com/vi/JIB-azlAO9A/maxresdefault.jpg)](https://youtu.be/JIB-azlAO9A)
