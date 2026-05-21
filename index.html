@@ -1,156 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Windows Server Home Lab</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background-color: #081b0f;
-      color: #d8ffe1;
-      font-family: Arial, sans-serif;
-      line-height: 1.7;
-    }
-
-    header {
-      background: #0f2d18;
-      padding: 35px;
-      text-align: center;
-      border-bottom: 2px solid #1aff66;
-      box-shadow: 0 0 15px rgba(26,255,102,0.3);
-    }
-
-    header h1 {
-      color: #1aff66;
-      font-size: 2.8rem;
-    }
-
-    header p {
-      color: #9dffb8;
-      margin-top: 10px;
-      font-size: 1.1rem;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    .card {
-      background: #102417;
-      padding: 30px;
-      border-radius: 14px;
-      border: 1px solid #1aff66;
-      box-shadow: 0 0 15px rgba(26,255,102,0.15);
-      margin-bottom: 30px;
-    }
-
-    .card h2 {
-      color: #1aff66;
-      margin-bottom: 15px;
-      border-bottom: 1px solid #1aff66;
-      padding-bottom: 10px;
-    }
-
-    p, li {
-      color: #d8ffe1;
-    }
-
-    ul {
-      margin-left: 20px;
-      margin-top: 10px;
-    }
-
-    iframe {
-      width: 100%;
-      height: 500px;
-      border: none;
-      border-radius: 12px;
-      margin-top: 20px;
-      box-shadow: 0 0 20px rgba(26,255,102,0.2);
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 22px;
-      background: #1aff66;
-      color: #081b0f;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .button:hover {
-      background: #8cffb2;
-      transform: scale(1.05);
-    }
-
-    .info-box {
-      background: #0d1f13;
-      padding: 15px;
-      border-radius: 10px;
-      margin-top: 15px;
-      border-left: 4px solid #1aff66;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      color: #7dbe91;
-      border-top: 1px solid #1aff66;
-      margin-top: 40px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <header>
     <h1>Windows Server Home Lab</h1>
-    <p>Active Directory • DNS • DHCP • Hyper-V • Enterprise Networking</p>
+
+    <p>
+      Active Directory • DNS • DHCP • Hyper-V • Enterprise Networking
+    </p>
   </header>
 
-  <div class="container">
+  <main class="container">
 
-    <div class="card">
+    <!-- DESCRIPTION -->
+    <section class="card">
       <h2>Description</h2>
 
       <p>
-        This project demonstrates the setup of a Windows Server 2025
-        Home Lab that simulates a small enterprise network environment.
+        This project demonstrates the setup of a
+        Windows Server 2025 Home Lab that simulates
+        a small enterprise network environment.
       </p>
 
       <br>
 
       <p>
-        It includes the installation and configuration of
-        Active Directory, DNS, and DHCP services,
+        It includes the installation and configuration
+        of Active Directory, DNS, and DHCP services,
         along with a Windows client joined to a domain.
       </p>
 
       <br>
 
       <p>
-        The goal of this project is to develop hands-on skills
-        in Windows Server administration, network infrastructure setup,
-        and basic enterprise IT operations.
+        The goal of this project is to develop
+        hands-on skills in Windows Server administration,
+        network infrastructure setup, and basic
+        enterprise IT operations.
       </p>
-    </div>
+    </section>
 
-    <div class="card">
-      <h2>Project Objectives</h2>
+    <!-- OBJECTIVES -->
+    <section class="card">
+      <h2>Objectives</h2>
 
       <ul>
         <li>Install and configure Windows Server 2025</li>
@@ -160,9 +61,10 @@
         <li>Join a Windows client to the domain</li>
         <li>Practice basic troubleshooting in a network environment</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="card">
+    <!-- TECHNOLOGY -->
+    <section class="card">
       <h2>Technology Used</h2>
 
       <ul>
@@ -173,9 +75,10 @@
         <li>DHCP Server</li>
         <li>Hyper-V</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="card">
+    <!-- NETWORK -->
+    <section class="card">
       <h2>Network Configuration</h2>
 
       <div class="info-box">
@@ -185,14 +88,13 @@
         <p><strong>DNS:</strong> 192.168.10.10</p>
         <p><strong>DHCP Range:</strong> 192.168.10.100 - 192.168.10.200</p>
       </div>
-    </div>
+    </section>
 
-    <div class="card">
+    <!-- IMPLEMENTATION -->
+    <section class="card">
       <h2>Implementation Steps</h2>
 
-      <h3>1. Create Virtual Machines</h3>
-
-      <br>
+      <h3>Create Virtual Machines</h3>
 
       <p>
         Two virtual machines were created to simulate
@@ -213,26 +115,26 @@
 
       <br>
 
-      <h3>2. Install Windows Server 2025</h3>
-
-      <br>
+      <h3>Install Windows Server 2025</h3>
 
       <p>
         Windows Server 2025 was installed on the
-        SRV-DC01 virtual machine to prepare it as
-        the main server for the environment.
+        SRV-DC01 virtual machine to prepare it
+        as the main server for the environment.
       </p>
 
       <br>
 
       <p>
         After installation, the server was renamed
-        to SRV-DC01 for proper identification within the network.
+        to SRV-DC01 for proper identification
+        within the network.
       </p>
-    </div>
+    </section>
 
-    <div class="card">
-      <h2>Installation Walkthrough Video</h2>
+    <!-- VIDEO -->
+    <section class="card">
+      <h2>Windows Server 2025 Installation</h2>
 
       <iframe
         src="https://www.youtube.com/embed/JIB-azlAO9A"
@@ -245,9 +147,9 @@
          target="_blank">
          Watch on YouTube
       </a>
-    </div>
+    </section>
 
-  </div>
+  </main>
 
   <footer>
     © 2026 Windows Server Home Lab Project
