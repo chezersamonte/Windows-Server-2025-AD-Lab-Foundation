@@ -14,31 +14,43 @@
   <!-- SIDEBAR -->
   <aside class="sidebar">
 
-    <h2>Home Lab</h2>
+    <div class="logo">
+      <h2>Home Lab</h2>
+    </div>
 
     <nav>
       <a href="#description">Description</a>
       <a href="#objectives">Objectives</a>
       <a href="#technology">Technology</a>
       <a href="#topology">Topology</a>
-      <a href="#network">Network Config</a>
+      <a href="#network">Network</a>
       <a href="#implementation">Implementation</a>
-      <a href="#video">Installation Video</a>
+      <a href="#video">Video</a>
     </nav>
 
   </aside>
 
   <!-- MAIN CONTENT -->
-  <main class="content">
+  <main class="main-content">
 
     <!-- HERO -->
     <section class="hero">
 
-      <h1>Windows Server Home Lab</h1>
+      <div class="hero-content">
 
-      <p>
-        Windows Server 2025 • Active Directory • DNS • DHCP • Hyper-V
-      </p>
+        <span class="tag">
+          Windows Server 2025
+        </span>
+
+        <h1>
+          Windows Server Home Lab
+        </h1>
+
+        <p>
+          Active Directory • DNS • DHCP • Hyper-V • Enterprise Networking
+        </p>
+
+      </div>
 
     </section>
 
@@ -75,14 +87,16 @@
 
       <h2>Objectives</h2>
 
-      <ul>
-        <li>Install and configure Windows Server 2025</li>
-        <li>Set up Active Directory Domain Services (AD DS)</li>
-        <li>Configure DNS for domain name resolution</li>
-        <li>Configure DHCP for automatic IP assignment</li>
-        <li>Join a Windows client to the domain</li>
-        <li>Practice basic troubleshooting in a network environment</li>
-      </ul>
+      <div class="grid">
+
+        <div class="mini-card">Install Windows Server 2025</div>
+        <div class="mini-card">Configure Active Directory</div>
+        <div class="mini-card">Configure DNS</div>
+        <div class="mini-card">Configure DHCP</div>
+        <div class="mini-card">Join Windows Client</div>
+        <div class="mini-card">Practice Troubleshooting</div>
+
+      </div>
 
     </section>
 
@@ -91,7 +105,7 @@
 
       <h2>Technology Used</h2>
 
-      <div class="tech-grid">
+      <div class="grid">
 
         <div class="tech-card">Windows Server 2025</div>
         <div class="tech-card">Windows 10 / 11</div>
@@ -116,7 +130,7 @@
 
     </section>
 
-    <!-- NETWORK CONFIG -->
+    <!-- NETWORK -->
     <section class="card" id="network">
 
       <h2>Network Configuration</h2>
@@ -142,12 +156,12 @@
 
       <p>
         Two virtual machines were created to simulate
-        a small enterprise environment:
+        a basic enterprise environment.
       </p>
 
       <div class="vm-grid">
 
-        <!-- SERVER VM -->
+        <!-- VM 1 -->
         <div class="vm-card">
 
           <img
@@ -163,7 +177,7 @@
 
         </div>
 
-        <!-- CLIENT VM -->
+        <!-- VM 2 -->
         <div class="vm-card">
 
           <img
@@ -187,8 +201,8 @@
 
       <ul>
         <li>
-          Windows Server 2025 was installed on
-          the SRV-DC01 virtual machine.
+          Windows Server 2025 was installed
+          on the SRV-DC01 virtual machine.
         </li>
 
         <li>
@@ -202,15 +216,13 @@
     <!-- VIDEO -->
     <section class="card" id="video">
 
-      <h2>Windows Server 2025 Installation</h2>
+      <h2>Installation Walkthrough</h2>
 
       <iframe
         src="https://www.youtube.com/embed/JIB-azlAO9A"
         title="Windows Server 2025 Installation"
         allowfullscreen>
       </iframe>
-
-      <br>
 
       <a
         class="button"
@@ -226,11 +238,13 @@
     <!-- FOOTER -->
     <footer>
 
-      © 2026 Windows Server Home Lab Project
+      © 2026 Windows Server Home Lab
 
     </footer>
 
   </main>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
