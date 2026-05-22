@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Windows Server Home Labs</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="style.css">
+  <title>Windows Server Home Lab</title>
+
+  <link rel="stylesheet"
+        href="style.css">
+
 </head>
 
 <body>
@@ -19,13 +25,15 @@
     </div>
 
     <nav>
+
       <a href="#description">Description</a>
       <a href="#objectives">Objectives</a>
       <a href="#technology">Technology</a>
-      <a href="#topology">Topology</a>
-      <a href="#network">Network</a>
+      <a href="#topology">Network Topology & Configuration</a>
       <a href="#implementation">Implementation</a>
-      <a href="#video">Video</a>
+      <a href="#video">Install Windows Server 2025</a>
+      <a href="#post-installation">Post-Installation</a>
+
     </nav>
 
   </aside>
@@ -60,6 +68,7 @@
       <h2>Description</h2>
 
       <ul>
+
         <li>
           This project demonstrates the setup of a
           Windows Server 2025 Home Lab that simulates
@@ -78,6 +87,7 @@
           network infrastructure setup,
           and enterprise IT operations.
         </li>
+
       </ul>
 
     </section>
@@ -123,16 +133,15 @@
 
       <h2>Network Topology & Configuration</h2>
 
-   <p>
-  This section shows the network topology and IP configuration
-  used in the Windows Server Home Lab environment.
-</p>
+      <p>
+        This section shows the network topology and IP configuration
+        used in the Windows Server Home Lab environment.
+      </p>
 
       <img
         src="Images/NetworkTopology2.png"
         alt="Network Topology"
         class="image topology-image">
-
 
     </section>
 
@@ -184,17 +193,15 @@
 
       </div>
 
-      <br><br>
-
-
-
     </section>
-     
+
     <!-- VIDEO -->
     <section class="card" id="video">
- <h3>2. Install Windows Server 2025</h3>
+
+      <h2>2. Install Windows Server 2025</h2>
 
       <ul>
+
         <li>
           Windows Server 2025 was installed
           on the SRV-DC01 virtual machine.
@@ -204,14 +211,18 @@
           The server was renamed to SRV-DC01
           for proper network identification.
         </li>
-      </ul>
-      
 
-        <iframe
-  src="https://www.youtube.com/embed/jBmapydssBY"
-  title="Windows Server 2025 Installation"
-  allowfullscreen>
-</iframe>
+      </ul>
+
+      <div class="video-container">
+
+  <iframe
+    src="https://www.youtube.com/embed/jBmapydssBY"
+    title="Windows Server 2025 Installation"
+    allowfullscreen>
+  </iframe>
+
+</div>
 
       <a
         class="button"
@@ -224,6 +235,116 @@
 
     </section>
 
+    <!-- POST INSTALLATION -->
+    <section class="card" id="post-installation">
+
+      <h2>3. Post-Installation Tasks</h2>
+
+      <p>
+        After installing Windows Server 2025,
+        several post-installation configurations
+        were performed to prepare the server
+        for a production-like deployment.
+      </p>
+
+      <p>
+        These tasks ensure proper network communication,
+        remote management capability,
+        and system readiness before deploying
+        Active Directory services.
+      </p>
+
+      <div class="post-grid">
+
+        <!-- COMPUTER NAME -->
+        <div class="post-card">
+
+          <h4>Configure Computer Name</h4>
+
+          <img
+            src="Images/post-installation-tasks/computername.png"
+            alt="Configure Computer Name">
+
+          <p>
+            The server hostname was renamed to
+            SRV-DC01 for proper identification
+            within the network environment.
+          </p>
+
+        </div>
+
+        <!-- STATIC IP -->
+        <div class="post-card">
+
+          <h4>Set Static IP Address</h4>
+
+          <img
+            src="Images/post-installation-tasks/staticipaddress.png"
+            alt="Static IP Address">
+
+          <p>
+            A static IP address was configured
+            to ensure consistent network communication
+            for Active Directory, DNS, and DHCP services.
+          </p>
+
+        </div>
+
+        <!-- TIME ZONE -->
+        <div class="post-card">
+
+          <h4>Configure Time Zone</h4>
+
+          <img
+            src="Images/post-installation-tasks/timezone.png"
+            alt="Configure Time Zone">
+
+          <p>
+            The server time zone was configured
+            to ensure accurate logging,
+            authentication, and scheduled tasks.
+          </p>
+
+        </div>
+
+        <!-- REMOTE DESKTOP -->
+        <div class="post-card">
+
+          <h4>Enable Remote Desktop</h4>
+
+          <img
+            src="Images/post-installation-tasks/remotedesktop.png"
+            alt="Enable Remote Desktop">
+
+          <p>
+            Remote Desktop was enabled to allow
+            remote administration and management
+            of the server environment.
+          </p>
+
+        </div>
+
+        <!-- WINDOWS UPDATE -->
+        <div class="post-card">
+
+          <h4>Run Windows Updates</h4>
+
+          <img
+            src="Images/post-installation-tasks/runupdates.png"
+            alt="Run Windows Updates">
+
+          <p>
+            Windows updates were installed
+            to improve system stability,
+            security, and performance.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
     <!-- FOOTER -->
     <footer>
 
@@ -232,6 +353,17 @@
     </footer>
 
   </main>
+
+  <!-- IMAGE MODAL -->
+  <div class="image-modal" id="imageModal">
+
+    <span class="close-modal">&times;</span>
+
+    <img
+      class="modal-content"
+      id="modalImage">
+
+  </div>
 
   <script src="script.js"></script>
 
