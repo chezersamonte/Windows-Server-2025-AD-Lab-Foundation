@@ -1,11 +1,7 @@
 console.log("Windows Server Home Lab Loaded");
 
-/* =========================
-   ACTIVE NAVIGATION
-========================= */
-
+/* NAVIGATION ACTIVE */
 const sections = document.querySelectorAll("section");
-
 const navLinks = document.querySelectorAll(".sidebar nav a");
 
 window.addEventListener("scroll", () => {
@@ -13,69 +9,43 @@ window.addEventListener("scroll", () => {
   let current = "";
 
   sections.forEach(section => {
-
     const sectionTop = section.offsetTop;
 
-    if (pageYOffset >= sectionTop - 200) {
-      current = section.getAttribute("id");
+    if (scrollY >= sectionTop - 200) {
+      current = section.id;
     }
-
   });
 
   navLinks.forEach(link => {
-
     link.classList.remove("active");
 
-    if (link.getAttribute("href") === `#${current}`) {
+    if (link.getAttribute("href") === "#" + current) {
       link.classList.add("active");
     }
-
   });
 
 });
 
-/* =========================
-   IMAGE MODAL
-========================= */
-
+/* IMAGE MODAL */
 const modal = document.getElementById("imageModal");
-
 const modalImg = document.getElementById("modalImage");
+const closeBtn = document.querySelector(".close-modal");
 
-const images = document.querySelectorAll(
-  ".post-card img, .vm-card img, .topology-image"
-);
+document.querySelectorAll("img").forEach(img => {
 
-const closeModal = document.querySelector(".close-modal");
-
-/* OPEN MODAL */
-
-images.forEach(image => {
-
-  image.addEventListener("click", () => {
-
+  img.addEventListener("click", () => {
     modal.style.display = "flex";
-
-    modalImg.src = image.src;
-
+    modalImg.src = img.src;
   });
 
 });
 
-/* CLOSE BUTTON */
-
-closeModal.addEventListener("click", () => {
-
+closeBtn.addEventListener("click", () => {
   modal.style.display = "none";
-
 });
-
-/* CLOSE WHEN CLICK OUTSIDE */
 
 modal.addEventListener("click", (e) => {
-
-  if (e.target !== modalImg) {
+  if (e.target === modal) {
     modal.style.display = "none";
   }
-
 });
