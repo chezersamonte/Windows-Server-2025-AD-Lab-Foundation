@@ -331,67 +331,80 @@ body {
   background: #1d4ed8;
 }
 
+
 /* =========================
-   POST INSTALLATION
+   POST INSTALLATION (FIXED ROW LAYOUT)
 ========================= */
 
 .post-grid {
   display: grid;
-
-  grid-template-columns: repeat(6,1fr);
-
-  gap: 25px;
-
+  grid-template-columns: repeat(5, 1fr); /* 5 cards = 1 row */
+  gap: 20px;
   margin-top: 30px;
+  align-items: stretch;
 }
 
-.post-card:nth-child(1),
-.post-card:nth-child(2),
-.post-card:nth-child(3) {
-  grid-column: span 2;
-}
-
-.post-card:nth-child(4),
-.post-card:nth-child(5) {
-  grid-column: span 3;
-}
-
+/* CARD */
 .post-card {
   background: #f8fafc;
-
   border: 1px solid #e2e8f0;
-
   border-radius: 20px;
-
   overflow: hidden;
-
   display: flex;
-
   flex-direction: column;
+  transition: 0.3s;
 }
 
+/* hover effect */
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(15,23,42,0.1);
+}
+
+/* TITLE */
 .post-card h4 {
-  padding: 20px 20px 10px;
+  padding: 15px 15px 5px;
+  color: #0f172a;
 }
 
+/* BIGGER IMAGES */
 .post-card img {
   width: 100%;
-
-  height: 260px;
-
-  object-fit: contain;
-
-  background: white;
-
+  height: 300px;        /* keep big size */
+  object-fit: contain;  /* ✅ shows FULL image */
+  background: #fff;     /* fills empty space nicely */
   padding: 10px;
-
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
   cursor: pointer;
 }
 
+/* DESCRIPTION */
 .post-card p {
-  padding: 20px;
-
+  padding: 15px;
+  color: #475569;
+  line-height: 1.6;
   flex-grow: 1;
+}
+
+/* =========================
+   RESPONSIVE (IMPORTANT)
+========================= */
+
+@media (max-width: 1200px) {
+  .post-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .post-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .post-card img {
+    height: 220px;
+  }
 }
 
 /* =========================
