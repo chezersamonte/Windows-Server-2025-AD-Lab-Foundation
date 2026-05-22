@@ -33,6 +33,9 @@
       <a href="#implementation">Implementation</a>
       <a href="#video">Install Windows Server 2025</a>
       <a href="#post-installation">Post-Installation</a>
+<a href="#deploy-ad-ds-dns">
+  Deploy Active Directory Domain Services (AD DS) and DNS
+</a>
 
     </nav>
 
@@ -195,7 +198,7 @@
 
     </section>
 
-    <!-- VIDEO -->
+    <!-- Install Windows Server 2025 Video -->
     <section class="card" id="video">
 
       <h2>2. Install Windows Server 2025</h2>
@@ -240,19 +243,15 @@
 
       <h2>3. Post-Installation Tasks</h2>
 
-      <p>
-        After installing Windows Server 2025,
-        several post-installation configurations
-        were performed to prepare the server
-        for a production-like deployment.
-      </p>
+   <ul>
+  <li>
+    After installing Windows Server 2025, several post-installation configurations were performed to prepare the server for a production-like deployment.
+  </li>
 
-      <p>
-        These tasks ensure proper network communication,
-        remote management capability,
-        and system readiness before deploying
-        Active Directory services.
-      </p>
+  <li>
+    These tasks ensure proper network communication, remote management capability, and system readiness before deploying Active Directory services.
+  </li>
+</ul>
 
       <div class="post-grid">
 
@@ -344,6 +343,58 @@
       </div>
 
     </section>
+
+<!-- Deploy AD DS -->
+<section class="card" id="deploy-ad-ds-dns">
+
+  <h2>
+    4. Deploy Active Directory Domain Services (AD DS) and DNS
+  </h2>
+
+  <ul>
+  <li>
+    The Active Directory Domain Services (AD DS) role was installed and configured to enable domain controller functionality.
+  </li>
+
+  <li>
+    During the domain controller promotion process, the DNS Server role was automatically installed and configured to support domain name resolution within the Active Directory environment.
+  </li>
+
+  <li>
+    <strong>Domain:</strong> csenterprise.local
+  </li>
+
+  <li>
+    This configuration enables centralized management of users, computers, authentication, and network resources.
+  </li>
+</ul>
+
+  
+
+  <!-- AD DS and DNS VIDEO -->
+
+  <div class="video-container">
+
+ 
+
+    <iframe
+      src="https://www.youtube.com/embed/aMR2QhKNbjg"
+      title="Deploy Active Directory Domain Services and DNS"
+      allowfullscreen>
+    </iframe>
+
+  </div>
+
+  <a
+  class="button"
+  href="https://youtu.be/aMR2QhKNbjg"
+  target="_blank">
+
+  Watch on YouTube
+
+</a>
+
+</section>
 
     <!-- FOOTER -->
     <footer>
