@@ -31,12 +31,11 @@
       <a href="#technology">Technology</a>
       <a href="#topology">Network Topology & Configuration</a>
       <a href="#implementation">Implementation</a>
-      <a href="#video">Install Windows Server 2025</a>
-      <a href="#post-installation">Post-Installation</a>
+      <a href="#windows-server-2025-installation-&-post-installation">Windows Server 2025 Installation & Post-Installation Tasks</a>
 <a href="#deploy-ad-ds-dns">
-  Deploy Active Directory Domain Services (AD DS) and DNS
+  Deploy & Administer Active Directory Domain Services (AD DS)
 </a>
-<a href="#deploy-dhcp">Deploy DHCP</a>
+<a href="#deploy-&-administer-dhcp">Deploy & Administer DHCP</a>
 <a href="#join-client-to-domain">Join Client to Domain</a>
 <a href="#test">Test Domain Connectivity</a>
 <a href="#Troubleshooting">Troubleshooting Common Issues</a>
@@ -215,7 +214,7 @@
     </section>
 
     <!-- Install Windows Server 2025 Video -->
-    <section class="card" id="video">
+    <section class="card" id="windows-server-2025-installation-&-post-installation">
 
       <h2>2. Install Windows Server 2025</h2>
 
@@ -252,10 +251,6 @@
 
       </a>
 
-    </section>
-
-    <!-- POST INSTALLATION -->
-    <section class="card" id="post-installation">
 
       <h2>3. Post-Installation Tasks</h2>
 
@@ -364,34 +359,30 @@
 <section class="card" id="deploy-ad-ds-dns">
 
   <h2>
-    4. Deploy Active Directory Domain Services (AD DS) and DNS
+    4.1. Deploy Active Directory Domain Services (AD DS) and DNS
   </h2>
 
   <ul>
-  <li>
-    The Active Directory Domain Services (AD DS) role was installed and configured to enable domain controller functionality.
-  </li>
+    <li>
+      The Active Directory Domain Services (AD DS) role was installed and configured to enable domain controller functionality.
+    </li>
 
-  <li>
-    During the domain controller promotion process, the DNS Server role was automatically installed and configured to support domain name resolution within the Active Directory environment.
-  </li>
+    <li>
+      During the domain controller promotion process, the DNS Server role was automatically installed and configured to support domain name resolution within the Active Directory environment.
+    </li>
 
-  <li>
-    <strong>Domain:</strong> csenterprise.local
-  </li>
+    <li>
+      <strong>Domain:</strong> csenterprise.local
+    </li>
 
-  <li>
-    This configuration enables centralized management of users, computers, authentication, and network resources.
-  </li>
-</ul>
-
-  
+    <li>
+      This configuration enables centralized management of users, computers, authentication, and network resources.
+    </li>
+  </ul>
 
   <!-- AD DS and DNS VIDEO -->
 
   <div class="video-container">
-
- 
 
     <iframe
       src="https://www.youtube.com/embed/aMR2QhKNbjg"
@@ -401,14 +392,299 @@
 
   </div>
 
-  <a
-  class="button"
-  href="https://youtu.be/aMR2QhKNbjg"
-  target="_blank">
+  <a class="button" href="https://youtu.be/aMR2QhKNbjg" target="_blank">
+    Watch on YouTube
+  </a>
 
+
+<!-- BASIC AD DS ADMINISTRATION -->
+
+
+  <h2>
+    4.2. Basic Active Directory Domain Services (AD DS) Administration
+  </h2>
+
+  <ul>
+    <li>
+      Basic Active Directory administration tasks were performed
+      to simulate user and resource management
+      in an enterprise environment.
+    </li>
+
+    <li>
+      These tasks include managing users,
+      groups, organizational units,
+      and security policies within the domain.
+    </li>
+  </ul>
+
+  <div class="post-grid">
+
+    <!-- MANAGE OU -->
+    <div class="post-card">
+
+      <h4>Manage Organizational Units</h4>
+
+      <img
+        src="Images/addsadministration/manageorganizationalunit.png"
+        alt="Manage Organizational Units">
+
+      <p>
+        Organizational Units (OUs) were created
+        to organize users and resources
+        within Active Directory.
+      </p>
+
+    </div>
+
+    <!-- CREATE USER -->
+    <div class="post-card">
+
+      <h4>Create User Accounts</h4>
+
+      <img
+        src="Images/addsadministration/createuser.png"
+        alt="Create User Accounts">
+
+      <p>
+        User accounts were created
+        to allow authentication
+        and access to domain resources.
+      </p>
+
+    </div>
+
+    <!-- RESET PASSWORD -->
+    <div class="post-card">
+
+      <h4>Reset Passwords</h4>
+
+      <img
+        src="Images/addsadministration/resetpassword.png"
+        alt="Reset Passwords">
+
+      <p>
+        Passwords were reset
+        to restore account access
+        and maintain security.
+      </p>
+
+    </div>
+
+    <!-- UNLOCK USER -->
+    <div class="post-card">
+
+      <h4>Unlock User Accounts</h4>
+
+      <img
+        src="Images/addsadministration/unlockuseraccount.png"
+        alt="Unlock User Accounts">
+
+      <p>
+        Locked user accounts were unlocked
+        after failed sign-in attempts.
+      </p>
+
+    </div>
+
+    <!-- DISABLE ACCOUNT -->
+    <div class="post-card">
+
+      <h4>Disable or Delete Accounts</h4>
+
+      <img
+        src="Images/addsadministration/disabledeleteaccount.png"
+        alt="Disable or Delete Accounts">
+
+      <p>
+        Unused accounts were disabled
+        or deleted to improve
+        account management and security.
+      </p>
+
+    </div>
+
+    <!-- SECURITY GROUP -->
+    <div class="post-card">
+
+      <h4>Create Security Groups</h4>
+
+      <img
+        src="Images/addsadministration/createsecuritygroup.png"
+        alt="Create Security Groups">
+
+      <p>
+        Security groups were created
+        to simplify permission
+        and access management.
+      </p>
+
+    </div>
+
+    <!-- ADD USERS TO GROUPS -->
+    <div class="post-card">
+
+      <h4>Add Users to Groups</h4>
+
+      <img
+        src="Images/addsadministration/addusertogroups.png"
+        alt="Add Users to Groups">
+
+      <p>
+        Users were added to groups
+        to assign permissions
+        and resource access.
+      </p>
+
+    </div>
+
+    <!-- ASSIGN PERMISSIONS -->
+    <div class="post-card">
+
+      <h4>Assign Permissions</h4>
+
+      <img
+        src="Images/addsadministration/assignpermissions.png"
+        alt="Assign Permissions">
+
+      <p>
+        Permissions were assigned
+        to control access
+        to shared resources and folders.
+      </p>
+
+    </div>
+
+    <!-- PASSWORD POLICY -->
+    <div class="post-card">
+
+      <h4>Password Policy</h4>
+
+      <img
+        src="Images/addsadministration/passwordpolicy.png"
+        alt="Password Policy">
+
+      <p>
+        Password policies were configured
+        to enforce password complexity
+        and security requirements.
+      </p>
+
+    </div>
+
+    <!-- ACCOUNT LOCKOUT POLICY -->
+    <div class="post-card">
+
+      <h4>Account Lockout Policy</h4>
+
+      <img
+        src="Images/addsadministration/accountlockoutpolicy.png"
+        alt="Account Lockout Policy">
+
+      <p>
+        Account lockout policies were configured
+        to protect the environment
+        from unauthorized access attempts.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Deploy DHCP -->
+<section class="card" id="deploy-&-administer-dhcp">
+
+  <h2>
+    5. Deploy & Administer DHCP
+  </h2>
+
+  <ul>
+
+    <li>
+      The DHCP Server role was installed and configured
+      to automatically assign IP addresses
+      to client devices within the network environment.
+    </li>
+
+    <li>
+      Basic DHCP administration tasks were performed
+      to simulate enterprise network management
+      and automated client configuration.
+    </li>
+
+  </ul>
+
+  <!-- DHCP VIDEO -->
+
+  <div class="video-container local-video">
+
+  <video controls>
+
+    <source
+      src="Videos/deploydhcp-server.mp4"
+      type="video/mp4">
+
+    Your browser does not support the video tag.
+
+  </video>
+
+</div>
+
+<a class="button" href="https://youtu.be/cugrbuD5Cgo" target="_blank">
   Watch on YouTube
-
 </a>
+
+<h2>
+  5.1. Test DHCP Client Connectivity
+</h2>
+
+<div class="vm-grid">
+
+  <!-- JOIN PC CLIENT -->
+
+  <div class="vm-card">
+
+      <h4>Join PC Client to DHCP Server</h4>
+
+    <img
+      src="Images/dhcp/joinpctodhcp.png"
+      alt="Join PC Client to DHCP Server"
+      class="image">
+
+  
+
+    <p>
+      The client computer was configured
+      to obtain an IP address automatically
+      from the DHCP server.
+    </p>
+
+  </div>
+
+  <!-- TEST CONNECTIVITY -->
+
+  <div class="vm-card">
+
+        <h4>Test PC Client Connectivity</h4>
+
+    <img
+      src="Images/dhcp/connectivitytest.png"
+      alt="Test PC Client Connectivity"
+      class="image">
+
+
+
+    <p>
+      Network connectivity tests were performed
+      to verify successful DHCP configuration
+      and communication between devices.
+    </p>
+
+  </div>
+
+</div>
 
 </section>
 
