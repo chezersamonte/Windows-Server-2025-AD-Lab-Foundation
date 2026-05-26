@@ -35,9 +35,8 @@
 <a href="#deploy-ad-ds-dns">
   Deploy & Administer Active Directory Domain Services (AD DS)
 </a>
-<a href="#deploy-&-administer-dhcp">Deploy & Administer DHCP</a>
-<a href="#join-client-to-domain">Join Client to Domain</a>
-<a href="#test">Test Domain Connectivity</a>
+<a href="#deploy-&-administer-dhcp">Deploy & Administer DHCP Server</a>
+<a href="#join-client-to-domain_test-connectivity">Join PC to Domain & Test Connectivity</a>
 <a href="#Troubleshooting">Troubleshooting Common Issues</a>
     </nav>
 
@@ -685,6 +684,100 @@
   </div>
 
 </div>
+
+</section>
+
+<!-- JOIN DOMAIN & TEST CONNECTIVITY -->
+<section class="card" id="join-client-to-domain_test-connectivity">
+
+  <h2>
+    6. Join PC to Domain & Test Connectivity
+  </h2>
+
+  <ul>
+
+    <li>
+      The client PC was joined to the Active Directory domain
+      to enable centralized authentication and management.
+    </li>
+
+    <li>
+      After joining the domain, connectivity and login tests were performed
+      to verify proper domain integration.
+    </li>
+
+  </ul>
+
+  <!-- VIDEO -->
+  <div class="video-container">
+
+    <iframe
+      src="https://www.youtube.com/embed/1wlM_r89raM"
+      title="Join PC to Domain & Test Connectivity"
+      allowfullscreen>
+    </iframe>
+
+  </div>
+
+  <a class="button" href="https://youtu.be/1wlM_r89raM" target="_blank">
+    Watch on YouTube
+  </a>
+
+  <!-- TEST GRID -->
+  <div class="vm-grid">
+
+    <!-- LOGIN TEST -->
+    <div class="vm-card">
+
+      <h4>Test Domain Login</h4>
+
+      <img
+        src="Images/joinmanagedomainpc/testlogindomainuser.png"
+        alt="Test Domain Login"
+        class="image">
+
+      <p>
+        Verified that domain user accounts can successfully log in
+        on the client machine.
+      </p>
+
+    </div>
+
+    <!-- JOIN COMPUTER -->
+    <div class="vm-card">
+
+      <h4>Join Computer to Domain</h4>
+
+      <img
+        src="Images/joinmanagedomainpc/joincomputer.png"
+        alt="Join Computer to Domain"
+        class="image">
+
+      <p>
+        The PC was successfully added to the Active Directory domain
+        using system settings.
+      </p>
+
+    </div>
+
+    <!-- CMD TEST -->
+    <div class="vm-card">
+
+      <h4>Connectivity Test (CMD)</h4>
+
+      <img
+        src="Images/joinmanagedomainpc/cmdtestconnectivity.png"
+        alt="CMD Connectivity Test"
+        class="image">
+
+      <p>
+        Network connectivity and domain resolution were tested
+        using command-line tools.
+      </p>
+
+    </div>
+
+  </div>
 
 </section>
 
