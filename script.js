@@ -1,51 +1,173 @@
 console.log("Windows Server Home Lab Loaded");
 
-/* NAVIGATION ACTIVE */
-const sections = document.querySelectorAll("section");
+/* =========================================
+   ACTIVE SIDEBAR
+========================================= */
+
+const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".sidebar nav a");
 
-window.addEventListener("scroll", () => {
+if (sections.length && navLinks.length) {
 
-  let current = "";
+  window.addEventListener("scroll", () => {
 
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
+    let current = "";
 
-    if (scrollY >= sectionTop - 200) {
-      current = section.id;
+    sections.forEach((section) => {
+
+      const sectionTop = section.offsetTop - 150;
+      const sectionHeight = section.offsetHeight;
+
+      if (
+        window.scrollY >= sectionTop &&
+        window.scrollY < sectionTop + sectionHeight
+      ) {
+        current = section.id;
+      }
+
+    });
+
+    navLinks.forEach((link) => {
+
+      link.classList.remove("active");
+
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active");
+      }
+
+    });
+
+  });
+
+}
+
+/* =========================================
+   SMOOTH SCROLL
+========================================= */
+
+navLinks.forEach((link) => {
+
+  link.addEventListener("click", (e) => {
+
+    e.preventDefault();
+
+    const target = document.querySelector(link.getAttribute("href"));
+
+    if (target) {
+
+      window.scrollTo({
+        top: target.offsetTop - 40,
+        behavior: "smooth"
+      });
+
+    }
+
+  });
+
+});
+
+/* =========================================
+   IMAGE MODAL (FIXED - SINGLE SYSTEM ONLY)
+========================================= */
+
+const clickableImages = document.querySelectorAll(".clickable-image");
+
+const imageModal = document.getElementById("imageModal");
+const modalImage = document.getElementById("modalImage");
+const closeModalBtn = document.querySelector(".close-modal");
+
+function openImageModal(image) {
+
+  if (!imageModal || !modalImage) return;
+
+  imageModal.style.display = "flex";
+  modalImage.src = image.src;
+  modalImage.alt = image.alt;
+
+  document.body.style.overflow = "hidden";
+}
+
+function closeImageModal() {
+
+  if (!imageModal) return;
+
+  imageModal.style.display = "none";
+  document.body.style.overflow = "auto";
+}
+
+clickableImages.forEach((image) => {
+
+  image.addEventListener("click", () => {
+    openImageModal(image);
+  });
+
+});
+
+if (closeModalBtn) {
+  closeModalBtn.addEventListener("click", closeImageModal);
+}
+
+if (imageModal) {
+  imageModal.addEventListener("click", (e) => {
+    if (e.target === imageModal) {
+      closeImageModal();
     }
   });
+}
 
-  navLinks.forEach(link => {
-    link.classList.remove("active");
+/* =========================================
+   REVEAL ANIMATION
+========================================= */
 
-    if (link.getAttribute("href") === "#" + current) {
-      link.classList.add("active");
+const revealItems = document.querySelectorAll(".card, .troubleshooting-card");
+
+function revealOnScroll() {
+
+  revealItems.forEach((item) => {
+
+    const top = item.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (top < windowHeight - 120) {
+      item.classList.add("show");
     }
+
   });
 
-});
+}
 
-/* IMAGE MODAL */
-const modal = document.getElementById("imageModal");
-const modalImg = document.getElementById("modalImage");
-const closeBtn = document.querySelector(".close-modal");
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
 
-document.querySelectorAll("img").forEach(img => {
+/* =========================================
+   TROUBLESHOOTING TOGGLE
+========================================= */
 
-  img.addEventListener("click", () => {
-    modal.style.display = "flex";
-    modalImg.src = img.src;
-  });
+const troubleshootingCards = document.querySelectorAll(".troubleshooting-card");
 
-});
+troubleshootingCards.forEach((card) => {
 
-closeBtn.addEventListener("click", () => {
-  modal.style.display = "none";
-});
+  const front = card.querySelector(".trouble-front");
+  const back = card.querySelector(".trouble-back");
+  const viewBtn = card.querySelector(".toggle-btn");
+  const backBtn = card.querySelector(".back-btn");
 
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.style.display = "none";
+  if (viewBtn && front && back) {
+
+    viewBtn.addEventListener("click", () => {
+      front.classList.remove("active");
+      back.classList.add("active");
+    });
+
   }
+
+  if (backBtn && front && back) {
+
+    backBtn.addEventListener("click", () => {
+      back.classList.remove("active");
+      front.classList.add("active");
+    });
+
+  }
+
 });
