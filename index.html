@@ -832,818 +832,918 @@
 
   <div class="troubleshooting-card">
 
-    <!-- FRONT -->
-    <div class="trouble-front active">
+  <!-- FRONT -->
+  <div class="trouble-front active">
 
-      <h3>
-        Trust Relationship Between Workstation and Domain Failed
-      </h3>
+    <h3>
+      Trust Relationship Between Workstation and Domain Failed
+    </h3>
 
-      <div class="issue-box">
+    <div class="issue-box">
 
-        <strong>Error Message:</strong>
+      <strong>Error Message:</strong>
 
-        <p>
-          “The trust relationship between this workstation
-          and the primary domain failed.”
-        </p>
-
-      </div>
-
-      <img
-        src="Images/troubleshootingcommonissues/trustrelationship.png"
-        alt="Trust relationship error"
-        class="image">
-
-      <button class="toggle-btn">
-        View Solution
-      </button>
+      <p>
+        “The trust relationship between this workstation
+        and the primary domain failed.”
+      </p>
 
     </div>
 
-    <!-- BACK -->
-    <div class="trouble-back">
+    <img
+      src="Images/troubleshootingcommonissues/trustrelationship.png"
+      alt="Trust relationship error"
+      class="image">
 
-      <h3>Investigation</h3>
-
-      <ul>
-
-        <li>Verified network connectivity between the client workstation and the Domain Controller</li>
-
-        <li>Checked whether the client machine could communicate with the DNS server</li>
-
-        <li>Confirmed the workstation was still joined to the domain</li>
-
-        <li>Tested domain connectivity using the computer name and domain credentials</li>
-
-        <li>Reviewed the computer account status in Active Directory Users and Computers (ADUC)</li>
-
-        <li>Verified date and time synchronization between the client and the Domain Controller</li>
-
-        <li>Attempted to log in using a domain user account to reproduce the issue</li>
-
-      </ul>
-
-      <h3>Resolution Steps</h3>
-
-      <ul>
-
-        <li>Logged in using the local administrator account</li>
-
-        <li>Removed the workstation from the domain</li>
-
-        <li>Joined the workstation to a temporary workgroup</li>
-
-        <li>Restarted the client computer</li>
-
-        <li>Rejoined the workstation to the Active Directory domain</li>
-
-        <li>Restarted the workstation again</li>
-
-        <li>Verified successful domain authentication</li>
-
-      </ul>
-
-      <img
-        src="Images/troubleshootingcommonissues/domainloginnmembershipstatus.png"
-        alt="Successful domain login"
-        class="image">
-
-      <button class="toggle-btn back-btn">
-        Back to Error
-      </button>
-
-    </div>
+    <button class="toggle-btn">
+      View Solution
+    </button>
 
   </div>
 
-  <!-- =========================================
+  <!-- BACK -->
+  <div class="trouble-back">
+
+    <h3>Probable Cause</h3>
+
+    <ul>
+
+      <li>Computer account password mismatch between the workstation and the Domain Controller</li>
+
+      <li>Commonly caused by restoring VM checkpoints, inactive machines, or Active Directory synchronization issues</li>
+
+    </ul>
+
+    <h3>Investigation</h3>
+
+    <ul>
+
+      <li>Verified network connectivity between the workstation and the Domain Controller</li>
+
+      <li>Tested DNS resolution and confirmed the client could locate the Domain Controller</li>
+
+      <li>Reviewed the computer account status in Active Directory Users and Computers (ADUC)</li>
+
+      <li>Verified date and time synchronization between the workstation and Domain Controller</li>
+
+      <li>Attempted domain login to reproduce the trust relationship error</li>
+
+    </ul>
+
+    <h3>Resolution Steps</h3>
+
+    <ul>
+
+      <li>Logged in using the local administrator account</li>
+
+      <li>Removed the workstation from the domain</li>
+
+      <li>Joined the workstation to a temporary workgroup</li>
+
+      <li>Restarted the workstation</li>
+
+      <li>Rejoined the workstation to the Active Directory domain</li>
+
+      <li>Restarted the workstation again</li>
+
+      <li>Verified successful domain authentication and login</li>
+
+    </ul>
+
+    <img
+      src="Images/troubleshootingcommonissues/domainloginnmembershipstatus.png"
+      alt="Successful domain login"
+      class="image">
+
+    <button class="toggle-btn back-btn">
+      Back to Error
+    </button>
+
+  </div>
+
+</div>
+
+ <!-- =========================================
        ISSUE 2
-  ========================================= -->
+========================================= -->
 
-  <div class="troubleshooting-card">
+<div class="troubleshooting-card">
 
-    <div class="trouble-front active">
+  <div class="trouble-front active">
 
-      <h3>
-        The RPC Server Is Unavailable
-      </h3>
+    <h3>
+      The RPC Server Is Unavailable
+    </h3>
 
-      <div class="issue-box">
+    <div class="issue-box">
 
-        <strong>Error Message:</strong>
+      <strong>Error Message:</strong>
 
-        <p>
-          “The RPC server is unavailable.”
-        </p>
-
-      </div>
-
-      <img
-        src="Images/troubleshootingcommonissues/rpcserverunavailable.png"
-        alt="RPC server unavailable"
-        class="image">
-
-      <button class="toggle-btn">
-        View Solution
-      </button>
+      <p>
+        “The RPC server is unavailable.”
+      </p>
 
     </div>
 
-    <div class="trouble-back">
+    <!-- RPC Error Screenshot -->
+    <img
+      src="Images/troubleshootingcommonissues/therpcserverisunavailable.png"
+      alt="The RPC server is unavailable error"
+      class="image">
 
-      <h3>Investigation</h3>
-
-      <ul>
-
-        <li>Tested network communication between the client and server</li>
-
-        <li>Verified DNS name resolution</li>
-
-        <li>Checked Windows Firewall settings</li>
-
-        <li>Verified RPC-related services were running</li>
-
-        <li>Tested connectivity using ping and nslookup commands</li>
-
-        <li>Checked whether remote management ports were accessible</li>
-
-      </ul>
-
-      <h3>Resolution Steps</h3>
-
-      <ul>
-
-        <li>Started required RPC services</li>
-
-        <li>Allowed RPC traffic through Windows Firewall</li>
-
-        <li>Verified correct DNS server configuration</li>
-
-        <li>Restarted affected systems</li>
-
-        <li>Retested remote communication successfully</li>
-
-      </ul>
-
-      <img
-        src="Images/troubleshootingcommonissues/rpcsuccess.png"
-        alt="RPC issue fixed"
-        class="image">
-
-      <button class="toggle-btn back-btn">
-        Back to Error
-      </button>
-
-    </div>
+    <button class="toggle-btn">
+      View Solution
+    </button>
 
   </div>
 
-  <!-- =========================================
+  <div class="trouble-back">
+
+    <h3>Probale Cause</h3>
+
+    <ul>
+
+      <li>RPC-related services are stopped or unreachable</li>
+
+      <li>Incorrect DNS configuration or blocked network communication between systems</li>
+
+      <li>Windows Firewall is blocking RPC traffic</li>
+
+    </ul>
+
+    <h3>Investigation</h3>
+
+    <ul>
+
+      <li>Tested network communication between the client and server</li>
+
+      <li>Verified DNS name resolution using nslookup</li>
+
+      <li>Checked Windows Firewall settings</li>
+
+      <li>Verified required RPC-related services were running</li>
+
+      <li>Tested connectivity using ping command</li>
+
+      <li>Checked remote management connectivity between systems</li>
+
+    </ul>
+
+    <h3>Resolution Steps</h3>
+
+    <ul>
+
+      <li>Started required RPC-related services</li>
+
+      <li>Allowed RPC traffic through Windows Firewall</li>
+
+      <li>Verified correct DNS server configuration</li>
+
+      <li>Restarted affected systems</li>
+
+      <li>Retested remote communication successfully</li>
+
+    </ul>
+
+    <!-- DNS Configuration Screenshot -->
+    <img
+      src="Images/troubleshootingcommonissues/dnsserverip.png"
+      alt="Correct DNS server configuration"
+      class="image">
+
+    <button class="toggle-btn back-btn">
+      Back to Error
+    </button>
+
+  </div>
+
+</div>
+
+ <!-- =========================================
        ISSUE 3
-  ========================================= -->
+========================================= -->
 
-  <div class="troubleshooting-card">
+<div class="troubleshooting-card">
 
-    <div class="trouble-front active">
+  <div class="trouble-front active">
 
-      <h3>
-        Domain Controller Could Not Be Contacted
-      </h3>
+    <h3>
+      Disabled User Account
+    </h3>
 
-      <div class="issue-box">
+    <div class="issue-box">
 
-        <strong>Error Message:</strong>
+      <strong>Error Message:</strong>
 
-        <p>
-          “An Active Directory Domain Controller (AD DC)
-          for the domain could not be contacted.”
-        </p>
-
-      </div>
-
-      <img
-        src="Images/troubleshootingcommonissues/domaincontrollererror.png"
-        alt="Domain controller could not be contacted"
-        class="image">
-
-      <button class="toggle-btn">
-        View Solution
-      </button>
+      <p>
+        “Your account has been disabled.
+        Please see your system administrator.”
+      </p>
 
     </div>
 
-    <div class="trouble-back">
+    <!-- Disabled Account Error Screenshot -->
+    <img
+      src="Images/troubleshootingcommonissues/accountisdisabled.png"
+      alt="Account is disabled error"
+      class="image">
 
-      <h3>Investigation</h3>
-
-      <ul>
-
-        <li>Checked DNS configuration on the client machine</li>
-
-        <li>Verified connectivity to the Domain Controller</li>
-
-        <li>Tested domain name resolution using nslookup</li>
-
-        <li>Checked Active Directory and DNS services</li>
-
-        <li>Verified network adapter settings</li>
-
-        <li>Tested communication using ping commands</li>
-
-      </ul>
-
-      <h3>Resolution Steps</h3>
-
-      <ul>
-
-        <li>Configured the correct DNS server IP address</li>
-
-        <li>Restarted networking services</li>
-
-        <li>Verified Active Directory communication</li>
-
-        <li>Successfully joined the workstation to the domain</li>
-
-      </ul>
-
-      <img
-        src="Images/troubleshootingcommonissues/domaincontrollersuccess.png"
-        alt="Domain controller issue fixed"
-        class="image">
-
-      <button class="toggle-btn back-btn">
-        Back to Error
-      </button>
-
-    </div>
+    <button class="toggle-btn">
+      View Solution
+    </button>
 
   </div>
 
-  <!-- =========================================
+  <div class="trouble-back">
+
+    <h3>Probable Cause</h3>
+
+    <ul>
+
+      <li>User account was manually disabled in Active Directory Users and Computers (ADUC)</li>
+
+      <li>Account may have been disabled due to security policy or administrative action</li>
+
+    </ul>
+
+    <h3>Investigation</h3>
+
+    <ul>
+
+      <li>Verified the user account status in Active Directory Users and Computers (ADUC)</li>
+
+      <li>Confirmed the account was disabled</li>
+
+      <li>Reviewed account properties and group membership</li>
+
+      <li>Verified domain connectivity and authentication services were functioning properly</li>
+
+      <li>Tested login using another domain account to isolate the issue</li>
+
+    </ul>
+
+    <h3>Resolution Steps</h3>
+
+    <ul>
+
+      <li>Re-enabled the disabled user account in Active Directory</li>
+
+      <li>Verified the account was unlocked and enabled successfully</li>
+
+      <li>Confirmed correct group membership and permissions</li>
+
+      <li>Retested domain login successfully</li>
+
+    </ul>
+
+    <!-- Showing Disabled Account -->
+    <img
+      src="Images/troubleshootingcommonissues/showingaccountdisabled.png"
+      alt="Showing disabled account"
+      class="image">
+
+    <!-- Showing Account Re-enabled -->
+    <img
+      src="Images/troubleshootingcommonissues/showingaccoungreenabled.png"
+      alt="Showing account re-enabled"
+      class="image">
+
+    <button class="toggle-btn back-btn">
+      Back to Error
+    </button>
+
+  </div>
+
+</div>
+
+<!-- =========================================
        ISSUE 4
-  ========================================= -->
+========================================= -->
 
-  <div class="troubleshooting-card">
+<div class="troubleshooting-card">
 
-    <div class="trouble-front active">
+  <div class="trouble-front active">
 
-      <h3>
-        DNS_PROBE_FINISHED_NXDOMAIN
-      </h3>
+    <h3>
+      Expired User Account
+    </h3>
 
-      <div class="issue-box">
+    <div class="issue-box">
 
-        <strong>Error Message:</strong>
+      <strong>Error Message:</strong>
 
-        <p>
-          “DNS_PROBE_FINISHED_NXDOMAIN”
-        </p>
-
-      </div>
-
-      <img
-        src="Images/troubleshootingcommonissues/dnsprobeerror.png"
-        alt="DNS probe finished NXDOMAIN"
-        class="image">
-
-      <button class="toggle-btn">
-        View Solution
-      </button>
+      <p>
+        “The user's account has expired.”
+      </p>
 
     </div>
 
-    <div class="trouble-back">
+    <!-- Expired Account Error Screenshot -->
+    <img
+      src="Images/troubleshootingcommonissues/useraccounthasexpired.png"
+      alt="User account has expired"
+      class="image">
 
-      <h3>Investigation</h3>
-
-      <ul>
-
-        <li>Tested DNS name resolution</li>
-
-        <li>Checked DNS zone records</li>
-
-        <li>Verified DNS client configuration</li>
-
-        <li>Tested internal resource accessibility</li>
-
-        <li>Reviewed DNS forward lookup zones</li>
-
-        <li>Verified DNS server communication</li>
-
-      </ul>
-
-      <h3>Resolution Steps</h3>
-
-      <ul>
-
-        <li>Corrected DNS server configuration</li>
-
-        <li>Created missing DNS records</li>
-
-        <li>Cleared DNS cache using ipconfig /flushdns</li>
-
-        <li>Retested internal resource access</li>
-
-      </ul>
-
-      <img
-        src="Images/troubleshootingcommonissues/dnsprobesuccess.png"
-        alt="DNS issue fixed"
-        class="image">
-
-      <button class="toggle-btn back-btn">
-        Back to Error
-      </button>
-
-    </div>
+    <button class="toggle-btn">
+      View Solution
+    </button>
 
   </div>
+
+  <div class="trouble-back">
+
+    <h3>Probable Cause</h3>
+
+    <ul>
+
+      <li>User account expiration date has been reached in Active Directory</li>
+
+      <li>Account expiration settings were configured for temporary or limited user access</li>
+
+    </ul>
+
+    <h3>Investigation</h3>
+
+    <ul>
+
+      <li>Checked the user account expiration settings in Active Directory Users and Computers (ADUC)</li>
+
+      <li>Verified the configured account expiration date</li>
+
+      <li>Confirmed the account had already expired</li>
+
+      <li>Tested login using another domain account to isolate the issue</li>
+
+      <li>Verified domain authentication services were functioning properly</li>
+
+    </ul>
+
+    <h3>Resolution Steps</h3>
+
+    <ul>
+
+      <li>Removed or updated the account expiration date in Active Directory</li>
+
+      <li>Applied the updated account settings</li>
+
+      <li>Retested domain login successfully</li>
+
+      <li>Confirmed the user account authenticated normally</li>
+
+    </ul>
+
+    <!-- Showing Account Expired -->
+    <img
+      src="Images/troubleshootingcommonissues/showaccountexpired.png"
+      alt="Showing account expired"
+      class="image">
+
+    <!-- Account Expiry Date Changed -->
+    <img
+      src="Images/troubleshootingcommonissues/accountexpirydatechanged.png"
+      alt="Account expiry date changed"
+      class="image">
+
+    <button class="toggle-btn back-btn">
+      Back to Error
+    </button>
+
+  </div>
+
+</div>
 
   <!-- =========================================
        ISSUE 5
-  ========================================= -->
+========================================= -->
 
-  <div class="troubleshooting-card">
+<div class="troubleshooting-card">
 
-    <div class="trouble-front active">
+  <div class="trouble-front active">
 
-      <h3>
-        Client Receives an APIPA Address
-      </h3>
+    <h3>
+      Client Receives an APIPA Address
+    </h3>
 
-      <div class="issue-box">
+    <div class="issue-box">
 
-        <strong>Error Message:</strong>
+      <strong>Error Message:</strong>
 
-        <p>
-          Client receives an APIPA address
-          (169.254.x.x) instead of a DHCP IP.
-        </p>
-
-      </div>
-
-      <img
-        src="Images/troubleshootingcommonissues/apipaerror.png"
-        alt="APIPA address issue"
-        class="image">
-
-      <button class="toggle-btn">
-        View Solution
-      </button>
+      <p>
+        Client receives an APIPA address
+        (169.254.x.x) instead of a DHCP IP.
+      </p>
 
     </div>
 
-    <div class="trouble-back">
+    <img
+      src="Images/troubleshootingcommonissues/showingapipaip.png"
+      alt="Showing APIPA IP address"
+      class="image">
 
-      <h3>Investigation</h3>
-
-      <ul>
-
-        <li>Verified DHCP Server service status</li>
-
-        <li>Checked DHCP scope availability</li>
-
-        <li>Tested network adapter configuration</li>
-
-        <li>Verified physical and virtual network connectivity</li>
-
-        <li>Checked whether the client was configured to obtain an IP address automatically</li>
-
-        <li>Verified DHCP authorization in Active Directory</li>
-
-      </ul>
-
-      <h3>Resolution Steps</h3>
-
-      <ul>
-
-        <li>Restarted DHCP services</li>
-
-        <li>Renewed the client IP address</li>
-
-        <li>Verified DHCP scope activation</li>
-
-        <li>Confirmed successful DHCP lease assignment</li>
-
-      </ul>
-
-      <img
-        src="Images/troubleshootingcommonissues/apipasuccess.png"
-        alt="APIPA issue fixed"
-        class="image">
-
-      <button class="toggle-btn back-btn">
-        Back to Error
-      </button>
-
-    </div>
+    <button class="toggle-btn">
+      View Solution
+    </button>
 
   </div>
 
-  <!-- =========================================
+  <div class="trouble-back">
+
+    <h3>Probable Cause</h3>
+
+    <ul>
+
+      <li>Client failed to contact the DHCP Server</li>
+
+      <li>DHCP service is stopped, unreachable, or scope is unavailable</li>
+
+      <li>Network adapter is not configured to obtain an IP address automatically</li>
+
+    </ul>
+
+    <h3>Investigation</h3>
+
+    <ul>
+
+      <li>Verified DHCP Server service status</li>
+
+      <li>Checked DHCP scope activation and IP address availability</li>
+
+      <li>Verified the client network adapter was configured to obtain an IP address automatically</li>
+
+      <li>Tested physical and virtual network connectivity</li>
+
+      <li>Checked client IP configuration using ipconfig</li>
+
+      <li>Attempted DHCP lease renewal using ipconfig /renew</li>
+
+    </ul>
+
+    <h3>Resolution Steps</h3>
+
+    <ul>
+
+      <li>Started or restarted the DHCP Server service</li>
+
+      <li>Verified DHCP scope was active and had available IP addresses</li>
+
+      <li>Configured the client to obtain an IP address automatically</li>
+
+      <li>Renewed the client IP address successfully</li>
+
+      <li>Confirmed the client received a valid DHCP IP address</li>
+
+    </ul>
+
+    <img
+      src="Images/troubleshootingcommonissues/showincorrectip.png"
+      alt="Correct DHCP IP assignment"
+      class="image">
+
+    <button class="toggle-btn back-btn">
+      Back to Error
+    </button>
+
+  </div>
+
+</div>
+
+<!-- =========================================
        ISSUE 6
-  ========================================= -->
+========================================= -->
 
-  <div class="troubleshooting-card">
+<div class="troubleshooting-card">
 
-    <div class="trouble-front active">
+  <div class="trouble-front active">
 
-      <h3>
-        Windows Could Not Obtain an IP Address
-      </h3>
+    <h3>
+      No Internet Connection
+    </h3>
 
-      <div class="issue-box">
+    <div class="issue-box">
 
-        <strong>Error Message:</strong>
+      <strong>Error Message:</strong>
 
-        <p>
-          “Windows could not obtain an IP address
-          from the DHCP Server.”
-        </p>
-
-      </div>
-
-      <img
-        src="Images/troubleshootingcommonissues/dhcpiperror.png"
-        alt="DHCP IP address issue"
-        class="image">
-
-      <button class="toggle-btn">
-        View Solution
-      </button>
+      <p>
+        “No Internet Access”
+      </p>
 
     </div>
 
-    <div class="trouble-back">
+    <img
+      src="Images/troubleshootingcommonissues/wronggateway.png"
+      alt="Wrong gateway configuration"
+      class="image">
 
-      <h3>Investigation</h3>
-
-      <ul>
-
-        <li>Verified DHCP scope configuration</li>
-
-        <li>Checked DHCP authorization status</li>
-
-        <li>Verified network adapter settings</li>
-
-        <li>Tested communication with the DHCP server</li>
-
-        <li>Checked for available IP addresses in the scope</li>
-
-        <li>Reviewed DHCP service status</li>
-
-      </ul>
-
-      <h3>Resolution Steps</h3>
-
-      <ul>
-
-        <li>Restarted DHCP services</li>
-
-        <li>Activated the DHCP scope</li>
-
-        <li>Renewed the client IP address</li>
-
-        <li>Verified successful DHCP assignment</li>
-
-      </ul>
-
-      <img
-        src="Images/troubleshootingcommonissues/dhcpipsuccess.png"
-        alt="DHCP IP issue fixed"
-        class="image">
-
-      <button class="toggle-btn back-btn">
-        Back to Error
-      </button>
-
-    </div>
+    <button class="toggle-btn">
+      View Solution
+    </button>
 
   </div>
 
-  <!-- =========================================
+  <div class="trouble-back">
+
+    <h3>Probable Cause</h3>
+
+    <ul>
+
+      <li>Incorrect default gateway or DNS server configuration</li>
+
+      <li>DHCP configuration issue or network connectivity problem</li>
+
+    </ul>
+
+    <h3>Investigation</h3>
+
+    <ul>
+
+      <li>Checked IP address, subnet mask, default gateway, and DNS settings</li>
+
+      <li>Tested network connectivity using ping commands</li>
+
+      <li>Verified the client received valid network settings from DHCP</li>
+
+      <li>Tested internet connectivity from another device</li>
+
+      <li>Verified physical and virtual network connectivity</li>
+
+    </ul>
+
+    <h3>Resolution Steps</h3>
+
+    <ul>
+
+      <li>Corrected default gateway and DNS server configuration</li>
+
+      <li>Renewed the client IP configuration</li>
+
+      <li>Restarted the network adapter</li>
+
+      <li>Retested internet connectivity successfully</li>
+
+    </ul>
+
+    <img
+      src="Images/troubleshootingcommonissues/showincorrectip.png"
+      alt="Correct network configuration"
+      class="image">
+
+    <button class="toggle-btn back-btn">
+      Back to Error
+    </button>
+
+  </div>
+
+</div>
+
+<!-- =========================================
        ISSUE 7
-  ========================================= -->
+========================================= -->
 
-  <div class="troubleshooting-card">
+<div class="troubleshooting-card">
 
-    <div class="trouble-front active">
+  <div class="trouble-front active">
 
-      <h3>
-        IP Address Conflict Detected
-      </h3>
+    <h3>
+      Duplicate Computer Name
+    </h3>
 
-      <div class="issue-box">
+    <div class="issue-box">
 
-        <strong>Error Message:</strong>
+      <strong>Error Message:</strong>
 
-        <p>
-          “IP address conflict detected on the network.”
-        </p>
-
-      </div>
-
-      <img
-        src="Images/troubleshootingcommonissues/ipconflict.png"
-        alt="IP address conflict"
-        class="image">
-
-      <button class="toggle-btn">
-        View Solution
-      </button>
+      <p>
+        “A duplicate name exists on the network.”
+      </p>
 
     </div>
 
-    <div class="trouble-back">
+    <img
+      src="Images/troubleshootingcommonissues/duplicatepcname.png"
+      alt="Duplicate computer name issue"
+      class="image">
 
-      <h3>Investigation</h3>
-
-      <ul>
-
-        <li>Identified duplicate IP addresses on the network</li>
-
-        <li>Checked DHCP reservations and exclusions</li>
-
-        <li>Reviewed static IP configurations</li>
-
-        <li>Tested network communication</li>
-
-        <li>Verified active DHCP leases</li>
-
-        <li>Checked client network settings</li>
-
-      </ul>
-
-      <h3>Resolution Steps</h3>
-
-      <ul>
-
-        <li>Released and renewed client IP configuration</li>
-
-        <li>Corrected duplicate static IP settings</li>
-
-        <li>Updated DHCP exclusions and reservations</li>
-
-        <li>Confirmed unique IP assignment</li>
-
-      </ul>
-
-      <img
-        src="Images/troubleshootingcommonissues/ipconflictsuccess.png"
-        alt="IP conflict resolved"
-        class="image">
-
-      <button class="toggle-btn back-btn">
-        Back to Error
-      </button>
-
-    </div>
+    <button class="toggle-btn">
+      View Solution
+    </button>
 
   </div>
 
-  <!-- =========================================
+  <div class="trouble-back">
+
+    <h3>Probable Cause</h3>
+
+    <ul>
+
+      <li>Another workstation is already using the same computer name on the network</li>
+
+      <li>Duplicate computer object exists in Active Directory</li>
+
+    </ul>
+
+    <h3>Investigation</h3>
+
+    <ul>
+
+      <li>Checked the computer name configured on the client workstation</li>
+
+      <li>Verified another device was already using the same hostname</li>
+
+      <li>Reviewed Active Directory computer objects for duplicate entries</li>
+
+      <li>Confirmed the issue occurred during domain join or network communication</li>
+
+    </ul>
+
+    <h3>Resolution Steps</h3>
+
+    <ul>
+
+      <li>Renamed the workstation with a unique computer name</li>
+
+      <li>Restarted the workstation after renaming</li>
+
+      <li>Retested domain communication successfully</li>
+
+      <li>Confirmed the workstation connected to the domain without errors</li>
+
+    </ul>
+
+    <img
+      src="Images/troubleshootingcommonissues/succesfullyconnectedtodomain.png"
+      alt="Successfully connected to domain"
+      class="image">
+
+    <button class="toggle-btn back-btn">
+      Back to Error
+    </button>
+
+  </div>
+
+</div>
+
+<!-- =========================================
        ISSUE 8
-  ========================================= -->
+========================================= -->
 
-  <div class="troubleshooting-card">
+<div class="troubleshooting-card">
 
-    <div class="trouble-front active">
+  <div class="trouble-front active">
 
-      <h3>
-        DNS Server Not Responding
-      </h3>
+    <h3>
+      DNS Server Not Responding
+    </h3>
 
-      <div class="issue-box">
+    <div class="issue-box">
 
-        <strong>Error Message:</strong>
+      <strong>Error Message:</strong>
 
-        <p>
-          “DNS server not responding.”
-        </p>
-
-      </div>
-
-      <img
-        src="Images/troubleshootingcommonissues/dnsservernotresponding.png"
-        alt="DNS server not responding"
-        class="image">
-
-      <button class="toggle-btn">
-        View Solution
-      </button>
+      <p>
+        “DNS server not responding.”
+      </p>
 
     </div>
 
-    <div class="trouble-back">
+    <img
+      src="Images/troubleshootingcommonissues/dnsservicestop.png"
+      alt="DNS Server service stopped"
+      class="image">
 
-      <h3>Investigation</h3>
-
-      <ul>
-
-        <li>Verified DNS service status</li>
-
-        <li>Tested DNS resolution using nslookup</li>
-
-        <li>Checked DNS client configuration</li>
-
-        <li>Verified network connectivity</li>
-
-        <li>Reviewed DNS zone configuration</li>
-
-        <li>Tested communication with the DNS server</li>
-
-      </ul>
-
-      <h3>Resolution Steps</h3>
-
-      <ul>
-
-        <li>Restarted DNS Server services</li>
-
-        <li>Corrected DNS client settings</li>
-
-        <li>Verified DNS zone records</li>
-
-        <li>Retested successful name resolution</li>
-
-      </ul>
-
-      <img
-        src="Images/troubleshootingcommonissues/dnsserverresponding.png"
-        alt="DNS server issue fixed"
-        class="image">
-
-      <button class="toggle-btn back-btn">
-        Back to Error
-      </button>
-
-    </div>
+    <button class="toggle-btn">
+      View Solution
+    </button>
 
   </div>
 
-  <!-- =========================================
+  <div class="trouble-back">
+
+    <h3>Probable Cause</h3>
+
+    <ul>
+
+      <li>DNS Server service is stopped or not running on the Domain Controller</li>
+
+      <li>Client systems cannot communicate with the DNS Server</li>
+
+    </ul>
+
+    <h3>Investigation</h3>
+
+    <ul>
+
+      <li>Checked DNS Server service status on the Domain Controller</li>
+
+      <li>Verified the DNS service was not running</li>
+
+      <li>Tested DNS resolution using nslookup from the client workstation</li>
+
+      <li>Confirmed DNS queries were failing</li>
+
+      <li>Verified network connectivity between the client and server</li>
+
+    </ul>
+
+    <h3>Resolution Steps</h3>
+
+    <ul>
+
+      <li>Started the DNS Server service on the Domain Controller</li>
+
+      <li>Configured the DNS Server service to start automatically</li>
+
+      <li>Restarted the DNS service successfully</li>
+
+      <li>Retested DNS resolution using nslookup</li>
+
+      <li>Confirmed successful name resolution</li>
+
+    </ul>
+
+    <img
+      src="Images/troubleshootingcommonissues/dnsservicerunning.png"
+      alt="DNS Server service running"
+      class="image">
+
+    <button class="toggle-btn back-btn">
+      Back to Error
+    </button>
+
+  </div>
+
+</div>
+
+<!-- =========================================
        ISSUE 9
-  ========================================= -->
+========================================= -->
 
-  <div class="troubleshooting-card">
+<div class="troubleshooting-card">
 
-    <div class="trouble-front active">
+  <div class="trouble-front active">
 
-      <h3>
-        Specified Domain Could Not Be Contacted
-      </h3>
+    <h3>
+      Specified Domain Could Not Be Contacted
+    </h3>
 
-      <div class="issue-box">
+    <div class="issue-box">
 
-        <strong>Error Message:</strong>
+      <strong>Error Message:</strong>
 
-        <p>
-          “The specified domain either does not exist
-          or could not be contacted.”
-        </p>
-
-      </div>
-
-      <img
-        src="Images/troubleshootingcommonissues/domainnotcontacted.png"
-        alt="Domain could not be contacted"
-        class="image">
-
-      <button class="toggle-btn">
-        View Solution
-      </button>
+      <p>
+        “The specified domain could not be contacted.”
+      </p>
 
     </div>
 
-    <div class="trouble-back">
+    <img
+      src="Images/troubleshootingcommonissues/domainisoff.png"
+      alt="Domain Controller powered off"
+      class="image">
 
-      <h3>Investigation</h3>
-
-      <ul>
-
-        <li>Verified DNS server settings</li>
-
-        <li>Tested connectivity to the Domain Controller</li>
-
-        <li>Checked Active Directory services</li>
-
-        <li>Tested domain name resolution</li>
-
-        <li>Verified client network configuration</li>
-
-        <li>Reviewed firewall and network settings</li>
-
-      </ul>
-
-      <h3>Resolution Steps</h3>
-
-      <ul>
-
-        <li>Corrected DNS server configuration</li>
-
-        <li>Restarted network services</li>
-
-        <li>Verified communication with the Domain Controller</li>
-
-        <li>Successfully connected to the domain</li>
-
-      </ul>
-
-      <img
-        src="Images/troubleshootingcommonissues/domaincontactsuccess.png"
-        alt="Domain contact issue fixed"
-        class="image">
-
-      <button class="toggle-btn back-btn">
-        Back to Error
-      </button>
-
-    </div>
+    <button class="toggle-btn">
+      View Solution
+    </button>
 
   </div>
 
-  <!-- =========================================
+  <div class="trouble-back">
+
+    <h3>Probable Cause</h3>
+
+    <ul>
+
+      <li>Domain Controller is powered off or unreachable</li>
+
+      <li>DNS or network connectivity issue prevents communication with the domain</li>
+
+    </ul>
+
+    <h3>Investigation</h3>
+
+    <ul>
+
+      <li>Tested network connectivity between the client and Domain Controller</li>
+
+      <li>Attempted to ping the Domain Controller</li>
+
+      <li>Verified DNS name resolution for the domain</li>
+
+      <li>Confirmed the Domain Controller was unreachable</li>
+
+    </ul>
+
+    <h3>Resolution Steps</h3>
+
+    <ul>
+
+      <li>Powered on the Domain Controller</li>
+
+      <li>Verified Active Directory Domain Services were running</li>
+
+      <li>Confirmed DNS services were operational</li>
+
+      <li>Retested domain communication successfully</li>
+
+      <li>Confirmed the client could contact the domain</li>
+
+    </ul>
+
+    <img
+      src="Images/troubleshootingcommonissues/domainison.png"
+      alt="Domain Controller powered on"
+      class="image">
+
+    <button class="toggle-btn back-btn">
+      Back to Error
+    </button>
+
+  </div>
+
+</div>
+
+<!-- =========================================
        ISSUE 10
-  ========================================= -->
+========================================= -->
 
-  <div class="troubleshooting-card">
+<div class="troubleshooting-card">
 
-    <div class="trouble-front active">
+  <div class="trouble-front active">
 
-      <h3>
-        DHCP Server Not Authorized
-      </h3>
+    <h3>
+      DHCP Server Not Authorized
+    </h3>
 
-      <div class="issue-box">
+    <div class="issue-box">
 
-        <strong>Error Message:</strong>
+      <strong>Error Message:</strong>
 
-        <p>
-          “The DHCP/BINL service on the local machine,
-          belonging to the Windows Administrative domain,
-          has determined that it is not authorized to start.”
-        </p>
-
-      </div>
-
-      <img
-        src="Images/troubleshootingcommonissues/dhcpnotauthorized.png"
-        alt="DHCP not authorized"
-        class="image">
-
-      <button class="toggle-btn">
-        View Solution
-      </button>
+      <p>
+        “The DHCP/BINL service on the local machine, belonging to the Windows Administrative domain, has determined that it is not authorized to start.”
+      </p>
 
     </div>
 
-    <div class="trouble-back">
+    <img
+      src="Images/troubleshootingcommonissues/dhcpnotautorized.jpg"
+      alt="DHCP Server not authorized"
+      class="image">
 
-      <h3>Investigation</h3>
-
-      <ul>
-
-        <li>Checked DHCP authorization status in Active Directory</li>
-
-        <li>Verified Active Directory connectivity</li>
-
-        <li>Reviewed DHCP Server service logs</li>
-
-        <li>Tested communication with the Domain Controller</li>
-
-        <li>Verified server permissions and credentials</li>
-
-        <li>Confirmed DHCP role installation status</li>
-
-      </ul>
-
-      <h3>Resolution Steps</h3>
-
-      <ul>
-
-        <li>Authorized the DHCP Server in Active Directory</li>
-
-        <li>Restarted DHCP services</li>
-
-        <li>Verified successful DHCP service startup</li>
-
-        <li>Confirmed proper client IP assignment</li>
-
-      </ul>
-
-      <img
-        src="Images/troubleshootingcommonissues/dhcpauthorizedsuccess.png"
-        alt="DHCP authorization fixed"
-        class="image">
-
-      <button class="toggle-btn back-btn">
-        Back to Error
-      </button>
-
-    </div>
+    <button class="toggle-btn">
+      View Solution
+    </button>
 
   </div>
+
+  <div class="trouble-back">
+
+    <h3>Probable Cause</h3>
+
+    <ul>
+
+      <li>DHCP Server is not authorized in Active Directory Domain Services (AD DS)</li>
+
+      <li>Unauthorized DHCP services are prevented from starting in the domain environment</li>
+
+    </ul>
+
+    <h3>Investigation</h3>
+
+    <ul>
+
+      <li>Checked DHCP Server service status</li>
+
+      <li>Verified DHCP authorization status in Active Directory</li>
+
+      <li>Reviewed Event Viewer logs for DHCP-related errors</li>
+
+      <li>Confirmed the server was joined to the domain</li>
+
+    </ul>
+
+    <h3>Resolution Steps</h3>
+
+    <ul>
+
+      <li>Authorized the DHCP Server in Active Directory</li>
+
+      <li>Restarted the DHCP Server service</li>
+
+      <li>Verified the DHCP service started successfully</li>
+
+      <li>Confirmed client devices received valid IP addresses from DHCP</li>
+
+    </ul>
+
+    <img
+      src="Images/troubleshootingcommonissues/dhcpisauthorized.png"
+      alt="DHCP Server authorized successfully"
+      class="image">
+
+    <button class="toggle-btn back-btn">
+      Back to Error
+    </button>
+
+  </div>
+
+</div>
 
 </section>
 
