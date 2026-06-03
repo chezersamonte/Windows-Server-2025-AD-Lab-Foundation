@@ -140,6 +140,35 @@ body {
   transform: scale(1.18);
 }
 
+.hero-subtitle {
+  margin-top: 10px;
+  opacity: 0.85;
+  font-size: 1rem;
+}
+
+/* Feature grid */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.feature-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  font-size: 0.9rem;
+}
+
+.feature-card span {
+  font-size: 1.2rem;
+}
+
 /* ========================================
    CARD
 ======================================== */
@@ -286,6 +315,7 @@ body {
   padding: 10px;
 }
 
+
 /* ========================================
    VIDEO
 ======================================== */
@@ -383,6 +413,35 @@ body {
   font-size: 50px;
   color: white;
   cursor: pointer;
+}
+
+
+/* ========================================
+   GPO GRID
+======================================== */
+.gpo-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+@media (max-width: 1400px) {
+    .gpo-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .gpo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .gpo-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ========================================
@@ -592,3 +651,14 @@ footer {
   margin-bottom: 35px;
 }
 
+
+
+/* ========================================
+   TWO IMAGES INSIDE GPO CARD
+======================================== */
+
+.gpo-two-images {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
