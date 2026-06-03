@@ -6,4 +6,4 @@ The lab was built using Hyper-V virtual machines to replicate a basic enterprise
 
 You can explore the full step-by-step implementation, screenshots, and video demonstrations here:
 
-## https://chezersamonte.github.io/Windows-Server-Home-Lab/](https://chezersamonte.github.io/Windows-Server-Infrastructure-Services-Lab
+## https://chezersamonte.github.io/Windows-Server-Infrastructure-Services-Lab
