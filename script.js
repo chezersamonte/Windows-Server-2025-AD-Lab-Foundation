@@ -140,34 +140,39 @@ window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
 
 /* =========================================
-   TROUBLESHOOTING TOGGLE
+   TROUBLESHOOTING TOGGLE (ONE OPEN ONLY)
 ========================================= */
 
-const troubleshootingCards = document.querySelectorAll(".troubleshooting-card");
+const cards = document.querySelectorAll(".troubleshooting-card");
 
-troubleshootingCards.forEach((card) => {
-
+cards.forEach((card) => {
   const front = card.querySelector(".trouble-front");
   const back = card.querySelector(".trouble-back");
   const viewBtn = card.querySelector(".toggle-btn");
   const backBtn = card.querySelector(".back-btn");
 
-  if (viewBtn && front && back) {
+  function resetAllCards() {
+    cards.forEach((c) => {
+      c.querySelector(".trouble-front").classList.add("active");
+      c.querySelector(".trouble-back").classList.remove("active");
+    });
+  }
 
+  // OPEN solution
+  if (viewBtn) {
     viewBtn.addEventListener("click", () => {
+      resetAllCards(); // 👈 closes all cards first
+
       front.classList.remove("active");
       back.classList.add("active");
     });
-
   }
 
-  if (backBtn && front && back) {
-
+  // BACK to error
+  if (backBtn) {
     backBtn.addEventListener("click", () => {
       back.classList.remove("active");
       front.classList.add("active");
     });
-
   }
-
 });
