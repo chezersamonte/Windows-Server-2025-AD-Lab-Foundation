@@ -85,6 +85,6 @@ https://github.com/chezersamonte/Windows-Server-Infrastructure-Services-Lab
 
 ## Author
 
-**Viannley Teruel**
+**Chezer O. Samonte**
 
 If you have suggestions or feedback, feel free to open an issue or connect with me through GitHub.
