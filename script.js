@@ -874,3 +874,76 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 });
+
+/* NAV CONTACT ME MOBILE */
+
+const contactLink = document.querySelector(".mobile-contact-link");
+const descriptionSection = document.querySelector("#description");
+
+
+window.addEventListener("scroll", function(){
+
+    if(window.innerWidth <= 768){
+
+        if(descriptionSection){
+
+            const sectionPosition = descriptionSection.offsetTop;
+
+            if(window.scrollY >= sectionPosition){
+
+                contactLink.classList.add("show");
+
+            }else{
+
+                contactLink.classList.remove("show");
+
+            }
+
+        }
+
+    }
+
+});
+
+
+document.addEventListener("DOMContentLoaded", function(){
+
+    const heroContact = document.querySelector(".hero-contact-btn");
+    const mobileContact = document.querySelector(".mobile-contact-btn");
+
+
+    function checkHeroContact(){
+
+        if(window.innerWidth <= 768){
+
+            if(heroContact){
+
+                const rect = heroContact.getBoundingClientRect();
+
+
+                // When hero contact button leaves the screen
+
+                if(rect.bottom < 0){
+
+                    mobileContact.classList.add("show");
+
+                }else{
+
+                    mobileContact.classList.remove("show");
+
+                }
+
+            }
+
+        }
+
+    }
+
+
+    window.addEventListener("scroll", checkHeroContact);
+
+
+    checkHeroContact();
+
+
+});
