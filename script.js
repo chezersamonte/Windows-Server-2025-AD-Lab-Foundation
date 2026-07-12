@@ -949,6 +949,8 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 
+/* EMAIL FORM SUBMISSION HANDLER */
+
 const form = document.getElementById("form");
 const submitBtn = form.querySelector("button[type='submit']");
 
