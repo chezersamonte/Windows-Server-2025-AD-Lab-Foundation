@@ -11,9 +11,30 @@
   <title>Windows Server 2025 Home Lab</title>
 
   <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <link rel="stylesheet"
         href="style.css">
 
 </head>
+
+<!-- =========================================
+     MOBILE HEADER
+========================================= -->
+
+<header class="mobile-header">
+
+   
+
+    <button class="hamburger" id="menu-toggle">
+    <i class="fas fa-bars"></i>
+</button>
+
+    <h2>
+        Microsoft Windows Server Admin & Support
+    </h2>
+
+</header>
 
 <body>
 
@@ -21,7 +42,7 @@
        SIDEBAR
   ========================================= -->
 
-  <aside class="sidebar">
+<aside class="sidebar" id="sidebar">
 
     <div class="logo">
       <h2>Home Lab</h2>
@@ -78,6 +99,8 @@
     </nav>
 
   </aside>
+
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
 
   <!-- =========================================
        MAIN CONTENT
@@ -146,13 +169,25 @@
 
     </div>
 
-    <div class="hero-image">
+  <div class="hero-image">
 
-      <img
-        src="Images/chezersamonte.jpeg"
-        alt="Chezer Samonte">
+    <div class="profile-card">
+
+        <img
+            src="Images/chezersamonte.jpeg"
+            alt="Chezer Samonte">
 
     </div>
+
+    <a href="#contact" class="hero-contact-btn">
+
+        <i class="fas fa-envelope"></i>
+
+        Contact Me
+
+    </a>
+
+</div>
 
   </div>
 
@@ -1828,6 +1863,8 @@
     including investigation procedures and resolution steps.
   </p>
 
+  <div class="troubleshooting-grid">
+
   <!-- =========================================
        ISSUE 1
   ========================================= -->
@@ -2747,17 +2784,150 @@
 
 </div>
 
+
+  </div>
+
+ <!-- ======================================
+            CONTACT
+====================================== -->
+
+<section id="contact">
+
+    <div class="contact-wrapper">
+
+        <!-- LEFT SIDE -->
+
+        <div class="contact-info">
+
+            <h2>Let's Connect</h2>
+
+            <p>
+
+                Thank you for exploring my
+                <strong>Windows Server 2025 Home Lab Portfolio</strong>.
+
+                This portfolio showcases hands-on experience with
+                Active Directory, DNS, DHCP, Group Policy,
+                Hyper-V, File Services, Print Services,
+                Windows Server Administration,
+                Microsoft 365 Administration,
+                and PowerShell automation.
+
+                <br><br>
+
+                I'm continuously building enterprise infrastructure
+                labs to strengthen my system administration skills.
+
+                If you're interested in discussing
+                Windows Server,
+                Microsoft 365,
+                IT Infrastructure,
+                or career opportunities,
+                I'd be happy to connect.
+
+            </p>
+
+            <div class="contact-buttons">
+
+                <a href="https://www.linkedin.com/in/chezer-samonte-9a6778153/"
+                   class="btn-contact btn-primary"
+                   target="_blank">
+
+                    <i class="fab fa-linkedin"></i>
+
+                    LinkedIn
+
+                </a>
+
+                <a href="https://github.com/chezersamonte?tab=repositories"
+                   class="btn-contact btn-outline"
+                   target="_blank">
+
+                    <i class="fab fa-github"></i>
+
+                    View Projects
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="contact-form-card">
+
+            <h3>Send Me a Message</h3>
+
+            <form action="https://formsubmit.co/chezer.orejola.samonte@gmail.com"
+                  method="POST">
+
+                <input type="hidden"
+                       name="_subject"
+                       value="New Portfolio Contact">
+
+                <input type="hidden"
+                       name="_captcha"
+                       value="false">
+
+                <input type="text"
+                       name="name"
+                       placeholder="Your Name"
+                       required>
+
+                <input type="email"
+                       name="email"
+                       placeholder="Your Email"
+                       required>
+
+                <input type="text"
+                       name="subject"
+                       placeholder="Subject"
+                       required>
+
+                <textarea
+                    name="message"
+                    rows="6"
+                    placeholder="Write your message..."
+                    required></textarea>
+
+                <button type="submit">
+
+                    <i class="fas fa-paper-plane"></i>
+
+                    Send Message
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
 </section>
 
+
+</section>
     <!-- =========================================
          FOOTER
     ========================================= -->
 
     <footer>
 
-      © 2026 Windows Server Home Lab
+    <p>
+        © 2026 Chezer O. Samonte. All Rights Reserved.
+    </p>
 
-    </footer>
+    <p>
+        Windows Server 2025 • Active Directory • DNS • DHCP • Group Policy • Hyper-V • File Services • Microsoft 365 Administration
+    </p>
+
+    <p>
+        Designed and built as a hands-on IT Infrastructure Learning Portfolio.
+    </p>
+
+</footer>
 
   </main>
 
@@ -2777,8 +2947,17 @@
 
 </div>
 
-  <script src="script.js"></script>
+<button class="back-to-top" id="backToTop" aria-label="Back to Top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <path d="M12 19V5M5 12l7-7 7 7"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"/>
+    </svg>
+</button>
 
+  <script src="script.js"></script>
 </body>
 
 </html>
