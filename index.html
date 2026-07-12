@@ -2859,53 +2859,81 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
         </div>
 
-        <!-- RIGHT SIDE -->
+         <!-- RIGHT SIDE -->
 
-        <div class="contact-form-card">
+       <div class="contact-form-card">
 
-            <h3>Send Me a Message</h3>
+    <h3>Send Me a Message</h3>
 
-            <form action="https://formsubmit.co/chezer.orejola.samonte@gmail.com"
+   <form action="https://formsubmit.co/chezer.orejola.samonte@gmail.com"
       method="POST">
 
-                <input type="hidden"
-                       name="_subject"
-                       value="New Portfolio Contact">
 
-                <input type="hidden"
-                       name="_captcha"
-                       value="false">
+        <!-- Email Subject -->
+        <input type="hidden"
+               name="_subject"
+               value="New Portfolio Contact Message">
 
-                <input type="text"
-                       name="name"
-                       placeholder="Your Name"
-                       required>
 
-                <input type="email"
-                       name="email"
-                       placeholder="Your Email"
-                       required>
+        <!-- Email Template -->
+        <input type="hidden"
+               name="_template"
+               value="table">
 
-                <input type="text"
-                       name="subject"
-                       placeholder="Subject"
-                       required>
 
-                <textarea
-                    name="message"
-                    rows="6"
-                    placeholder="Write your message..."
-                    required></textarea>
+        <!-- Disable Captcha -->
+        <input type="hidden"
+               name="_captcha"
+               value="false">
 
-                <button type="submit">
 
-                    <i class="fas fa-paper-plane"></i>
+        <!-- Redirect after sending -->
+        <input type="hidden"
+               name="_next"
+               value="https://chezersamonte.github.io/Windows-Server-Infrastructure-Services-Lab/thank-you.html">
 
-                    Send Message
 
-                </button>
+        <!-- Customer Name -->
+        <input type="text"
+               name="name"
+               placeholder="Your Name"
+               required>
 
-            </form>
+
+        <!-- Customer Email -->
+        <input type="email"
+               name="email"
+               placeholder="Your Email"
+               required>
+
+
+        <!-- Message Subject -->
+        <input type="text"
+               name="subject"
+               placeholder="Subject"
+               required>
+
+
+        <!-- Customer Message -->
+        <textarea
+            name="message"
+            rows="6"
+            placeholder="Write your message..."
+            required></textarea>
+
+
+        <!-- Submit Button -->
+        <button type="submit">
+
+            <i class="fas fa-paper-plane"></i>
+
+            Send Message
+
+        </button>
+
+
+    </form>
+
 
         </div>
 
