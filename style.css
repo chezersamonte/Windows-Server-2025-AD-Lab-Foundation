@@ -590,6 +590,51 @@ body::after{
 
 }
 
+.profile-info{
+
+    margin-top:18px;
+
+    padding:20px;
+
+    text-align:center;
+
+    background:#0f172a;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:18px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.20);
+
+}
+
+.profile-info h3{
+
+    color:#fff;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin-bottom:6px;
+
+}
+
+.profile-info p{
+
+    color:#93c5fd;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+
 /*==========================================
     HERO CONTACT BUTTON
 ==========================================*/
