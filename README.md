@@ -6,7 +6,7 @@ A hands-on Windows Server 2025 Home Lab designed to simulate a small enterprise 
 
 🌐 **View the lab here:**
 
-https://chezersamonte.github.io/Windows-Server-Infrastructure-Services-Lab
+[https://chezersamonte.github.io/Windows-Server-Infrastructure-Services-Lab](https://chezersamonte.github.io/Windows-Server-2025-System-Administration-Support/)
 
 ## Overview
 
