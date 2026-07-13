@@ -2047,7 +2047,18 @@ height:250px;
 
 }
 
+.profile-info h3{
+        font-size:clamp(1rem, 2vw, 1.3rem);
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        letter-spacing:-0.2px;
+    }
+
 }
+
+
+
 
 /*==========================================
     RESPONSIVE - MOBILE
@@ -3003,4 +3014,130 @@ CONTACT LAYOUT
 }
 
 
+/*==========================================================
+  CONTACT SECTION - SMALL MOBILE FIX
+==========================================================*/
 
+@media (max-width:480px){
+
+    #contact{
+        padding:50px 18px;
+        border-radius:16px;
+    }
+
+    .contact-wrapper{
+        display:flex;
+        flex-direction:column;
+        gap:30px;
+    }
+
+    .contact-info{
+        text-align:center;
+    }
+
+    .contact-info h2{
+        font-size:2rem;
+        line-height:1.2;
+        margin-bottom:16px;
+    }
+
+    .contact-info p{
+        font-size:15px;
+        line-height:1.7;
+        margin-bottom:18px;
+    }
+
+    .contact-form-card{
+        width:100%;
+        padding:22px;
+        border-radius:18px;
+    }
+
+    .contact-form-card h3{
+        font-size:22px;
+        text-align:center;
+    }
+
+    .contact-form-card input,
+    .contact-form-card textarea{
+        font-size:16px; /* prevents iOS zoom */
+        padding:14px 16px;
+    }
+
+    .contact-form-card textarea{
+        min-height:130px;
+    }
+
+    .contact-form-card button{
+        width:100%;
+        padding:15px;
+        font-size:16px;
+    }
+
+    .contact-buttons{
+        flex-direction:column;
+        gap:15px;
+        align-items:center;
+    }
+
+    .btn-contact{
+        width:100%;
+        max-width:300px;
+        height:56px;
+        font-size:16px;
+    }
+
+    .btn-contact i{
+        font-size:22px;
+    }
+
+}
+
+/*==========================================================
+  PROFILE CARD - SMALL MOBILE
+==========================================================*/
+
+@media (max-width:480px){
+
+    .hero-image{
+        width:100%;
+        align-items:center;
+    }
+
+    .profile-card{
+        width:100%;
+        max-width:280px;
+        padding:12px;
+    }
+
+    .profile-card img{
+        height:300px;
+    }
+
+    .profile-info{
+        padding:16px 14px;
+    }
+
+   .profile-info h3{
+        font-size:1rem;       /* 16px */
+        font-weight:700;
+        white-space:nowrap;   /* Keep on one line */
+        overflow:hidden;
+        text-overflow:ellipsis; /* Prevent overflow */
+        letter-spacing:-0.2px;
+    }
+
+    .profile-info p{
+        font-size:12px;
+        letter-spacing:.5px;
+        line-height:1.4;
+    }
+
+    .hero-contact-btn{
+        width:100%;
+        max-width:280px;
+        font-size:15px;
+        padding:14px;
+    }
+
+}
